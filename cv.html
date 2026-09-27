@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curriculum Vitae — Rayeesa Mahmood</title>
+<meta name="description" content="Full curriculum vitae of Rayeesa Mahmood: research, projects, experience, leadership, awards and certifications.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232B2BF0'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial Black,Arial' font-weight='900' font-size='30' fill='%23F2F1F7'%3ERM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{--cobalt:#2B2BF0; --pink:#FF4FA3; --ink:#16132E; --ink-2:#4A4666; --rule:#DAD8E8; --desk:#E6E4EF}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--desk); color:var(--ink); font-family:"Newsreader", Georgia, serif; -webkit-font-smoothing:antialiased}
+a{color:inherit; text-decoration-color:rgba(43,43,240,.45); text-underline-offset:2px}
+:focus-visible{outline:3px solid var(--pink); outline-offset:2px}
+.sans{font-family:"Bricolage", Arial, sans-serif}
+
+.bar{position:sticky; top:0; z-index:5; background:var(--cobalt); color:#fff; font-family:"Bricolage", Arial, sans-serif}
+.bar-in{max-width:900px; margin:0 auto; padding:12px 16px; display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+.bar a, .bar button{font:inherit; font-size:15px; font-weight:700; text-decoration:none; color:#fff; padding:9px 16px; border-radius:999px; border:1.5px solid rgba(255,255,255,.6); background:transparent; cursor:pointer}
+.bar .home{border:0; padding-left:0; margin-right:auto}
+.bar .solid{background:#fff; color:var(--cobalt); border-color:#fff}
+@media (max-width:560px){ .bar button{display:none} .bar a, .bar button{padding:8px 12px; font-size:14px} }
+
+.page{
+  width:210mm; margin:28px auto 48px; background:#fff; position:relative;
+  padding:17mm 17mm 16mm; box-shadow:0 30px 60px -30px rgba(22,19,46,.45);
+  font-size:10pt; line-height:1.44; border-top:6px solid var(--pink);
+}
+header.top{padding-bottom:14pt; border-bottom:1.5pt solid var(--ink); margin-bottom:6pt}
+.kicker{font-family:"Bricolage", Arial, sans-serif; font-size:10pt; font-weight:700; color:var(--pink); margin:0 0 6pt}
+h1{margin:0; font-family:"Bricolage", Arial, sans-serif; font-weight:800; font-stretch:76%; font-size:44pt; line-height:.88; letter-spacing:-.025em; color:var(--cobalt); font-variation-settings:"opsz" 96}
+.role{margin:8pt 0 10pt; font-size:13pt; font-style:italic}
+.contact{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:3pt 16pt; font-family:"Bricolage", Arial, sans-serif; font-size:9pt; color:var(--ink-2)}
+.contact a{text-decoration:none}
+
+section.s{position:relative; padding:12pt 0 6pt 42mm; border-bottom:.8pt solid var(--rule)}
+section.s:last-of-type{border-bottom:0}
+section.s > h2{
+  position:absolute; left:0; top:12pt; width:34mm;
+  margin:2pt 0 0; font-family:"Bricolage", Arial, sans-serif; font-weight:800; font-size:11pt; line-height:1.2;
+  color:var(--cobalt); letter-spacing:-.005em;
+}
+p{margin:0 0 6pt}
+.e{margin-bottom:9pt}
+.e-h, .sub{break-after:avoid}
+ul.b li, .meta{break-inside:avoid}
+.e-h{display:flex; justify-content:space-between; align-items:baseline; gap:14pt}
+.e-h h3{margin:0; font-family:"Bricolage", Arial, sans-serif; font-size:10.6pt; font-weight:700; line-height:1.3}
+.e-h .when{font-family:"Bricolage", Arial, sans-serif; font-size:8.8pt; color:var(--ink-2); white-space:nowrap}
+.sub{font-style:italic; color:var(--ink-2)}
+ul.b{margin:3pt 0 0; padding-left:12pt}
+ul.b li{margin-bottom:2pt}
+ul.b li::marker{color:var(--pink)}
+.meta{font-family:"Bricolage", Arial, sans-serif; font-size:8.8pt; color:var(--cobalt); font-weight:600; margin-top:3pt}
+.meta a{text-decoration:none}
+ol.pubs{margin:0; padding-left:14pt}
+ol.pubs li{margin-bottom:8pt; padding-left:2pt; break-inside:avoid}
+ol.pubs li::marker{font-family:"Bricolage", Arial, sans-serif; font-weight:700; color:var(--cobalt)}
+.skills{display:grid; grid-template-columns:auto 1fr; gap:3pt 14pt; margin:0}
+.skills dt{font-family:"Bricolage", Arial, sans-serif; font-weight:700; font-size:9.6pt}
+.skills dd{margin:0}
+.tidy{list-style:none; margin:0; padding:0}
+.tidy li{display:flex; justify-content:space-between; gap:14pt; margin-bottom:4pt; break-inside:avoid}
+.tidy b{font-family:"Bricolage", Arial, sans-serif; font-weight:700; font-size:10pt}
+.tidy .when{font-family:"Bricolage", Arial, sans-serif; font-size:8.8pt; color:var(--ink-2); white-space:nowrap}
+.foot{margin-top:14pt; font-family:"Bricolage", Arial, sans-serif; font-size:8.5pt; color:var(--ink-2); display:flex; justify-content:space-between}
+
+@media screen and (max-width:840px){
+  .page{width:auto; margin:16px; padding:26px 20px; font-size:16px}
+  section.s{padding-left:0}
+  section.s > h2{position:static; width:auto; margin-bottom:8px}
+  h1{font-size:48px}
+  .e-h, .tidy li{flex-direction:column; gap:0}
+}
+@page{size:A4; margin:14mm 0 12mm}
+@page:first{margin-top:0}
+@media print{
+  body{background:#fff}
+  .bar{display:none}
+  .page{margin:0; box-shadow:none; width:210mm; padding:18mm 17mm 0}
+}
+</style>
+</head>
+<body>
+<nav class="bar" aria-label="CV actions">
+  <div class="bar-in">
+    <a class="home" href="index.html">Rayeesa Mahmood</a>
+    <a href="resume.html">One-page résumé</a>
+    <button type="button" onclick="window.print()">Print</button>
+    <a class="solid" href="cv.pdf" download="Rayeesa_Mahmood_CV.pdf">Download PDF</a>
+  </div>
+</nav>
+
+<main class="page">
+  <header class="top">
+    <p class="kicker">Curriculum vitae</p>
+    <h1>Rayeesa Mahmood</h1>
+    <p class="role">Full-stack developer and UI/UX designer, building AI agent systems</p>
+    <ul class="contact">
+      <li>Hyderabad, India</li>
+      <li><a href="mailto:rayeesamahmood8098@gmail.com">rayeesamahmood8098@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/rayeesa-mahmood/">linkedin.com/in/rayeesa-mahmood</a></li>
+      <li><a href="https://github.com/RayeesaMahmood">github.com/RayeesaMahmood</a></li>
+      <li><a href="https://rayeesamahmood.github.io/PORTFOLIO/">rayeesamahmood.github.io/PORTFOLIO</a></li>
+    </ul>
+  </header>
+
+  <section class="s">
+    <h2>Profile</h2>
+    <div>
+      <p>Computer Science &amp; Engineering graduate who works across the whole arc of a product: the research question, the system design, the interface, and the deploy. My recent work applies multi-agent AI to administrative problems in healthcare and insurance, and has produced three published research papers and a Best Presenter award at ICSDE 2026.</p>
+      <p>Alongside building, I have spent four years in community work: leading technical training for 100+ students, co-organising state-level hackathons, and co-founding Bizzapt Enterprises, a digital studio for startups and small businesses.</p>
+    </div>
+  </section>
+
+  <section class="s">
+    <h2>Education</h2>
+    <div>
+      <div class="e">
+        <div class="e-h"><h3>B.E., Computer Science &amp; Engineering</h3><span class="when">Graduated 2026</span></div>
+        <div class="sub">Lords Institute of Engineering and Technology, Hyderabad · CGPA 8.66 / 10</div>
+      </div>
+      <div class="e">
+        <div class="e-h"><h3>Intermediate (MPC)</h3><span class="when">2020 – 2022</span></div>
+        <div class="sub">Iqbalia Junior College · 8.8 / 10</div>
+        <p style="margin-top:3pt">Java became my first deep dive into programming.</p>
+      </div>
+      <div class="e">
+        <div class="e-h"><h3>Secondary school</h3></div>
+        <div class="sub">Nalanda Public School</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s">
+    <h2>Research publications</h2>
+    <div>
+      <ol class="pubs">
+        <li><b>AI-Agent Framework for Clinical and Health Insurance Workflow Optimization.</b> Published 2026. Presented at ICSDE 2026, where it received the Best Presenter award.
+          <div class="meta"><a href="https://doi.org/10.6084/m9.figshare.32041392">DOI 10.6084/m9.figshare.32041392</a></div></li>
+        <li><b>RayCare: Hospital Queue Management System.</b> ORCHIDS International Conference.
+          <div class="meta"><a href="https://doi.org/10.6084/m9.figshare.30545999">DOI 10.6084/m9.figshare.30545999</a></div></li>
+        <li><b>Multi-Agent Framework for Real-Time AQI Monitoring.</b> International Conference on Emerging Technologies.
+          <div class="meta"><a href="https://doi.org/10.6084/m9.figshare.30933533">DOI 10.6084/m9.figshare.30933533</a></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="s">
+    <h2>Projects</h2>
+    <div>
+      <div class="e">
+        <div class="e-h"><h3>MediCore AI — clinical &amp; insurance workflow automation</h3></div>
+        <ul class="b">
+          <li>Architected a five-stage multi-agent pipeline: symptom analysis, diagnosis, procedure, claim decision and fraud detection</li>
+          <li>Designed modular agents for claims validation, appointment scheduling and patient-record synchronisation</li>
+          <li>Evaluated on a 1,200-patient dataset; flagged suspicious claims with an interface staff can act on</li>
+        </ul>
+        <div class="meta">Python · REST APIs · Multi-agent architecture · <a href="https://medicore-psi.vercel.app/">medicore-psi.vercel.app</a> · <a href="https://github.com/RayeesaMahmood/MediCore">github.com/RayeesaMahmood/MediCore</a></div>
+      </div>
+      <div class="e">
+        <div class="e-h"><h3>RayCare — hospital queue management &amp; patient tracking</h3></div>
+        <ul class="b">
+          <li>Built registration, appointment booking, live queue position and notifications, with an admin dashboard</li>
+          <li>Engineered the Firebase backend for concurrent users with sub-second sync; added emergency booking</li>
+        </ul>
+        <div class="meta">JavaScript · Firebase · HTML/CSS · Vercel · <a href="https://raycare.vercel.app/">raycare.vercel.app</a> · <a href="https://github.com/RayeesaMahmood/RayCare">github.com/RayeesaMahmood/RayCare</a></div>
+      </div>
+      <div class="e">
+        <div class="e-h"><h3>AuraOS — vision &amp; voice-enabled system control</h3></div>
+        <ul class="b">
+          <li>An operating layer for hands-free control through voice commands and hand gestures</li>
+          <li>Reached 96% accuracy on custom gesture recognition; combined voice, vision and intent into one command pipeline</li>
+        </ul>
+        <div class="meta">Python · OpenCV · MediaPipe · Speech recognition · React · <a href="https://ai-operating-layer-interface.vercel.app/">ai-operating-layer-interface.vercel.app</a> · <a href="https://github.com/RayeesaMahmood/kanz-Hackathon">github.com/RayeesaMahmood/kanz-Hackathon</a></div>
+      </div>
+      <div class="e">
+        <div class="e-h"><h3>Multi-agent AQI monitoring</h3></div>
+        <ul class="b">
+          <li>Autonomous agents fuse sensor, satellite and public data into personalised air-quality guidance</li>
+        </ul>
+        <div class="meta">Multi-agent systems · Data fusion · Environmental AI · <a href="https://doi.org/10.6084/m9.figshare.30933533">DOI 10.6084/m9.figshare.30933533</a></div>
+      </div>
+      <div class="e">
+        <div class="e-h"><h3>Bizzapt Enterprises — brand &amp; website</h3></div>
+        <ul class="b">
+          <li>Designed the brand identity and built the responsive company site from wireframes to launch in two weeks</li>
+        </ul>
+        <div class="meta">Figma · HTML · CSS · JavaScript · <a href="https://rayeesamahmood.github.io/Bizzapt-Enterprises/">rayeesamahmood.github.io/Bizzapt-Enterprises</a> · <a href="https://github.com/RayeesaMahmood/Bizzapt-Enterprises">github.com/RayeesaMahmood/Bizzapt-Enterprises</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s">
+    <h2>Experience</h2>
+    <div>
+      <div class="e">
+        <div class="e-h"><h3>Co-Founder</h3><span class="when">Current</span></div>
+        <div class="sub">Bizzapt Enterprises, Hyderabad</div>
+        <ul class="b">
+          <li>Lead design and web development for a studio building digital presence for startups and growing businesses</li>
+          <li>Steering the company towards AI automation products</li>
+        </ul>
+      </div>
+      <div class="e">
+        <div class="e-h"><h3>Technical Head</h3><span class="when">Feb 2023 – Jul 2025</span></div>
+        <div class="sub">CodeWave Hub Community, Lords Institute of Engineering and Technology</div>
+        <ul class="b">
+          <li>Designed and led Python fundamentals and Learnathon sessions for 100+ students across three batches</li>
+          <li>Wrote structured lab guides that reduced onboarding time by about 30%</li>
+          <li>Co-organised two Telangana state-level HackPrix hackathons with 50+ teams, coordinating technical infrastructure</li>
+          <li>Mentored junior developers on full-stack development, REST API design and deployment</li>
+        </ul>
+      </div>
+      <div class="e">
+        <div class="e-h"><h3>Web Development &amp; Python Intern</h3><span class="when">6 months</span></div>
+        <div class="sub">IntenCode, Hyderabad</div>
+        <ul class="b">
+          <li>Developed client-facing responsive pages in HTML5, CSS3 and JavaScript with cross-browser support</li>
+          <li>Built Python automation for data processing and reporting, reducing manual time by about 40%</li>
+          <li>Worked in a five-person Agile team with sprint deliverables and peer code reviews</li>
+        </ul>
+      </div>
+      <div class="e">
+        <div class="e-h"><h3>Full-Stack Web Development Intern</h3><span class="when">6 months</span></div>
+        <div class="sub">PANTECH, Lords Institute of Engineering and Technology</div>
+        <ul class="b">
+          <li>Developed and deployed two full-stack web applications with Python, Firebase and JavaScript</li>
+          <li>Hands-on with CI/CD pipelines, Vercel deployment and DevOps practice</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="s">
+    <h2>Awards &amp; honours</h2>
+    <div>
+      <ul class="tidy">
+        <li><span><b>Best Presenter</b>, ICSDE 2026, Lords Institute of Engineering &amp; Technology, for “AI-Agent–Integrated Framework for Optimizing Administrative Workflows”</span><span class="when">Aug 2026</span></li>
+        <li><span><b>Guinness World Record</b>, AI Training Hackathon</span><span class="when">Jul 2026</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="s">
+    <h2>Certifications</h2>
+    <div>
+      <ul class="tidy">
+        <li><span><b><a href="https://verify.skilljar.com/c/ini7iatx2u29">Anthropic Claude course</a></b>, LLM capabilities, API integration and application development</span></li>
+        <li><span><b><a href="https://skills.yourlearning.ibm.com/certificate/PLAN-7A1C23D574F6">IBM SkillsBuild</a></b>, ICT</span></li>
+        <li><span><b>Deloitte Australia</b>, Technology job simulation</span><span class="when">Jul 2025</span></li>
+        <li><span><b>AWS APAC</b>, Solutions Architecture job simulation</span><span class="when">Jun 2025</span></li>
+        <li><span><b>Tata Group</b>, Cybersecurity Analyst job simulation</span><span class="when">Jan 2025</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="s">
+    <h2>Leadership &amp; community</h2>
+    <div>
+      <ul class="tidy">
+        <li><span><b>Vice President</b>, Lords E-Cell</span><span class="when">2024</span></li>
+        <li><span><b>Documentation Head</b>, Lords E-Cell</span><span class="when">Sep 2023 – Dec 2024</span></li>
+        <li><span><b>Treasurer</b>, IEEE Student Branch, Lords: budgets for technical workshops and speaker sessions</span><span class="when">2023 – 2025</span></li>
+        <li><span><b>Organiser and mentor</b>, HackPrix at Lords, reaching around 1,500 students</span></li>
+        <li><span><b>Judge and mentor</b>, App Fusion</span></li>
+        <li><span><b>Member</b>, Orators Club and Mobile Development Club</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="s">
+    <h2>Technical skills</h2>
+    <div>
+      <dl class="skills">
+        <dt>Languages</dt><dd>Python, JavaScript, SQL, Java (intermediate)</dd>
+        <dt>AI &amp; LLMs</dt><dd>Claude API integration, prompt engineering, LLM-based workflows, agentic and multi-agent systems, OpenCV, MediaPipe, speech recognition</dd>
+        <dt>Frontend</dt><dd>React, HTML5, CSS3, responsive design, Three.js</dd>
+        <dt>Backend</dt><dd>Flask, Node.js, REST APIs, Firebase, SQL, NoSQL</dd>
+        <dt>Design</dt><dd>Figma, Adobe XD, Photoshop, Illustrator, user research, wireframing, prototyping</dd>
+        <dt>DevOps</dt><dd>Git, GitHub, CI/CD, Vercel, Netlify</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="s">
+    <h2>References</h2>
+    <div><p>Available on request.</p></div>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Résumé — Rayeesa Mahmood</title>
+<meta name="description" content="One-page résumé of Rayeesa Mahmood, full-stack developer and UI/UX designer in Hyderabad, India.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232B2BF0'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial Black,Arial' font-weight='900' font-size='30' fill='%23F2F1F7'%3ERM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{--cobalt:#2B2BF0; --pink:#FF4FA3; --ink:#16132E; --ink-2:#45415E; --rule:#D8D6E6; --desk:#E6E4EF}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--desk); color:var(--ink); font-family:"Bricolage", Arial, sans-serif; -webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pink); outline-offset:2px}
+
+.bar{position:sticky; top:0; z-index:5; background:var(--cobalt); color:#fff}
+.bar-in{max-width:900px; margin:0 auto; padding:12px 16px; display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+.bar a, .bar button{font:inherit; font-size:15px; font-weight:700; text-decoration:none; color:#fff; padding:9px 16px; border-radius:999px; border:1.5px solid rgba(255,255,255,.6); background:transparent; cursor:pointer}
+.bar .home{border:0; padding-left:0; margin-right:auto}
+.bar .solid{background:#fff; color:var(--cobalt); border-color:#fff}
+@media (max-width:560px){ .bar button{display:none} .bar a, .bar button{padding:8px 12px; font-size:14px} }
+
+.page{
+  width:210mm; min-height:297mm; margin:28px auto 48px; background:#fff;
+  padding:11mm 13mm 8mm; box-shadow:0 30px 60px -30px rgba(22,19,46,.45);
+  font-size:8.9pt; line-height:1.3; font-variation-settings:"opsz" 12;
+}
+@media screen and (max-width:840px){
+  .page{width:auto; min-height:0; margin:16px; padding:22px 18px; font-size:15px}
+}
+header.top{display:grid; grid-template-columns:1fr auto; gap:6px 20px; align-items:end; padding-bottom:7pt; border-bottom:2.2pt solid var(--cobalt)}
+h1{margin:0; font-weight:800; font-stretch:78%; font-size:28pt; line-height:.9; letter-spacing:-.02em; color:var(--cobalt); font-variation-settings:"opsz" 72}
+.role{margin:5pt 0 0; font-size:11pt; font-weight:600}
+.contact{list-style:none; margin:0; padding:0; text-align:right; font-size:8.6pt; line-height:1.5; color:var(--ink-2)}
+.contact a{text-decoration:none}
+@media screen and (max-width:840px){ header.top{grid-template-columns:1fr} .contact{text-align:left} h1{font-size:44px} }
+
+h2{
+  margin:8.5pt 0 3.5pt; font-size:9.8pt; font-weight:800; color:var(--cobalt); letter-spacing:.01em;
+  display:flex; align-items:center; gap:8pt;
+}
+h2::after{content:""; flex:1; height:.8pt; background:var(--rule)}
+p{margin:0}
+.summary{margin-top:7pt; color:var(--ink-2); max-width:none}
+
+.skills{display:grid; grid-template-columns:auto 1.12fr auto 1fr; gap:1.5pt 10pt}
+.skills dt{font-weight:700}
+.skills dd{margin:0; color:var(--ink-2)}
+
+.item{margin-bottom:4.5pt; break-inside:avoid}
+.item-h{display:flex; justify-content:space-between; gap:12pt; align-items:baseline}
+.item-h h3{margin:0; font-size:10.2pt; font-weight:750}
+.item-h .when{font-size:8.6pt; color:var(--ink-2); white-space:nowrap}
+.org{color:var(--ink-2); font-size:8.9pt}
+ul.b{margin:2pt 0 0; padding-left:11pt}
+ul.b li{margin-bottom:1pt; color:#2A2645}
+ul.b li::marker{color:var(--cobalt)}
+.tech{font-size:8.5pt; color:var(--cobalt); font-weight:600}
+.tech a, .when a{text-decoration:none}
+
+.cols{display:grid; grid-template-columns:1fr 1fr; gap:0 18pt}
+@media screen and (max-width:840px){ .cols{grid-template-columns:1fr} .skills{grid-template-columns:auto 1fr} }
+.list{list-style:none; margin:0; padding:0}
+.list li{margin-bottom:3pt}
+.list b{font-weight:700}
+.list span{color:var(--ink-2)}
+
+@page{size:A4; margin:0}
+@media print{
+  body{background:#fff}
+  .bar{display:none}
+  .page{margin:0; box-shadow:none; width:210mm; height:297mm; overflow:hidden}
+}
+</style>
+</head>
+<body>
+<nav class="bar" aria-label="Résumé actions">
+  <div class="bar-in">
+    <a class="home" href="index.html">Rayeesa Mahmood</a>
+    <a href="cv.html">Full CV</a>
+    <button type="button" onclick="window.print()">Print</button>
+    <a class="solid" href="resume.pdf" download="Rayeesa_Mahmood_Resume.pdf">Download PDF</a>
+  </div>
+</nav>
+
+<main class="page">
+  <header class="top">
+    <div>
+      <h1>Rayeesa Mahmood</h1>
+      <p class="role">Full-Stack Developer &amp; UI/UX Designer</p>
+    </div>
+    <ul class="contact">
+      <li>Hyderabad, India · <a href="mailto:rayeesamahmood8098@gmail.com">rayeesamahmood8098@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/rayeesa-mahmood/">linkedin.com/in/rayeesa-mahmood</a> · <a href="https://github.com/RayeesaMahmood">github.com/RayeesaMahmood</a></li>
+      <li><a href="https://rayeesamahmood.github.io/PORTFOLIO/">rayeesamahmood.github.io/PORTFOLIO</a></li>
+    </ul>
+  </header>
+
+  <p class="summary">Full-stack developer and designer with 3 published research papers and several live production apps. I build multi-agent AI systems with the Claude API, REST APIs in Python and Node.js, and real-time Firebase apps, and design their interfaces in Figma. Best Presenter, ICSDE 2026.</p>
+
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Languages</dt><dd>Python, JavaScript, SQL, Java</dd>
+    <dt>Frontend</dt><dd>React, HTML5, CSS3, responsive design, Three.js</dd>
+    <dt>AI &amp; LLMs</dt><dd>Claude API, multi-agent systems, prompt design, OpenCV</dd>
+    <dt>Backend</dt><dd>Flask, Node.js, REST APIs, Firebase, SQL, NoSQL</dd>
+    <dt>Design</dt><dd>Figma, Adobe XD, Photoshop, Illustrator, prototyping</dd>
+    <dt>DevOps</dt><dd>Git, GitHub, CI/CD, Vercel, Netlify</dd>
+  </dl>
+
+  <h2>Experience</h2>
+  <div class="item">
+    <div class="item-h"><h3>Co-Founder</h3><span class="when">Current</span></div>
+    <div class="org">Bizzapt Enterprises, Hyderabad</div>
+    <ul class="b">
+      <li>Lead design and web development for a digital studio serving startups and small businesses</li>
+      <li>Designed the brand and built the company website end to end, from wireframes to deployment</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="item-h"><h3>Technical Head</h3><span class="when">Feb 2023 – Jul 2025</span></div>
+    <div class="org">CodeWave Hub Community, Lords Institute of Engineering and Technology</div>
+    <ul class="b">
+      <li>Designed and led Python training for 100+ students across 3 batches; structured lab guides cut onboarding time by 30%</li>
+      <li>Co-organised 2 state-level HackPrix hackathons with 50+ teams; mentored juniors on full-stack work</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="item-h"><h3>Web Development &amp; Python Intern</h3><span class="when">6 months</span></div>
+    <div class="org">IntenCode, Hyderabad</div>
+    <ul class="b">
+      <li>Built responsive, cross-browser client pages in HTML5, CSS3 and JavaScript in a 5-person Agile team</li>
+      <li>Wrote Python automation for data processing and reporting, cutting manual effort by 40%</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="item-h"><h3>Full-Stack Web Development Intern</h3><span class="when">6 months</span></div>
+    <div class="org">PANTECH, Lords Institute of Engineering and Technology</div>
+    <ul class="b">
+      <li>Built and deployed 2 full-stack web apps with Python, Firebase and JavaScript, using CI/CD and Vercel</li>
+    </ul>
+  </div>
+
+  <h2>Projects</h2>
+  <div class="item">
+    <div class="item-h"><h3>MediCore AI — Clinical &amp; Health Insurance Workflow Automation</h3><span class="when"><a href="https://medicore-psi.vercel.app/">medicore-psi.vercel.app</a></span></div>
+    <ul class="b">
+      <li>Five-stage agent pipeline for claims, scheduling, record sync and fraud detection over 1,200 patients</li>
+    </ul>
+    <div class="tech">Python · REST APIs · Multi-agent architecture · <a href="https://github.com/RayeesaMahmood/MediCore">github.com/RayeesaMahmood/MediCore</a></div>
+  </div>
+  <div class="item">
+    <div class="item-h"><h3>RayCare — Hospital Queue Management &amp; Patient Tracking</h3><span class="when"><a href="https://raycare.vercel.app/">raycare.vercel.app</a></span></div>
+    <ul class="b">
+      <li>Real-time hospital queue with emergency booking and live tracking; sub-second Firebase sync across users</li>
+    </ul>
+    <div class="tech">JavaScript · Firebase · HTML/CSS · Vercel · <a href="https://github.com/RayeesaMahmood/RayCare">github.com/RayeesaMahmood/RayCare</a></div>
+  </div>
+  <div class="item">
+    <div class="item-h"><h3>AuraOS — Vision &amp; Voice-Enabled System Control</h3><span class="when"><a href="https://ai-operating-layer-interface.vercel.app/">ai-operating-layer-interface.vercel.app</a></span></div>
+    <ul class="b">
+      <li>Hands-free computer control through voice and gestures; 96% accuracy on custom gesture recognition</li>
+    </ul>
+    <div class="tech">Python · OpenCV · MediaPipe · Speech recognition · React · <a href="https://github.com/RayeesaMahmood/kanz-Hackathon">github.com/RayeesaMahmood/kanz-Hackathon</a></div>
+  </div>
+
+  <div class="cols">
+    <div>
+      <h2>Publications</h2>
+      <ul class="list">
+        <li><b>AI-Agent Framework for Clinical and Health Insurance Workflow Optimization</b> <span>2026 · DOI 10.6084/m9.figshare.32041392</span></li>
+        <li><b>RayCare: Hospital Queue Management System</b> <span>ORCHIDS Int’l Conference · DOI 10.6084/m9.figshare.30545999</span></li>
+        <li><b>Multi-Agent Framework for Real-Time AQI Monitoring</b> <span>Int’l Conf. on Emerging Technologies · DOI 10.6084/m9.figshare.30933533</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Awards &amp; certifications</h2>
+      <ul class="list">
+        <li><b>Guinness World Record</b> <span>AI Training Hackathon, Jul 2026</span></li>
+        <li><b>Best Presenter, ICSDE 2026</b> <span>Lords Institute, Aug 2026</span></li>
+        <li><b>Anthropic Claude course</b> <span>LLM APIs and app development</span></li>
+        <li><b>IBM SkillsBuild</b> <span>ICT certification</span></li>
+        <li><b>Job simulations</b> <span>Deloitte Australia (Technology), AWS APAC (Solutions Architecture), Tata Group (Cybersecurity)</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cols">
+    <div>
+      <h2>Education</h2>
+      <div class="item">
+        <div class="item-h"><h3>B.E., Computer Science &amp; Engineering</h3><span class="when">2026</span></div>
+        <div class="org">Lords Institute of Engg. &amp; Technology · CGPA 8.66</div>
+      </div>
+      <div class="item">
+        <div class="item-h"><h3>Intermediate (MPC)</h3><span class="when">2020 – 2022</span></div>
+        <div class="org">Iqbalia Junior College · 8.8 / 10</div>
+      </div>
+    </div>
+    <div>
+      <h2>Leadership</h2>
+      <ul class="list">
+        <li><b>Vice President</b> <span>Lords E-Cell, 2024</span></li>
+        <li><b>Treasurer</b> <span>IEEE Student Branch, 2023 – 2025</span></li>
+        <li><b>Judge &amp; mentor</b> <span>App Fusion</span></li>
+      </ul>
+    </div>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,56 @@
+/* ============================================================
+   HERO — interactive particle name
+   ============================================================ */
+.hero-p{
+  justify-content:center; align-items:center; text-align:center;
+  padding:110px 0 70px; min-height:100svh;
+}
+.hero-p .hero-scrim{
+  background:
+    radial-gradient(70% 55% at 50% 45%, transparent 40%, rgba(0,0,0,.55) 100%),
+    linear-gradient(180deg, transparent 70%, var(--bg) 100%);
+}
+.hero-p .hero-nebula-a{ top:-10%; left:10%; opacity:.18; }
+.hero-p .hero-nebula-b{ bottom:-30%; right:5%; opacity:.14; }
+.hp-inner{ position:relative; z-index:5; width:100%; max-width:1400px; padding:0 24px; display:flex; flex-direction:column; align-items:center; pointer-events:none; }
+.hp-inner a, .hp-inner button{ pointer-events:auto; }
+
+.hp-hello{ margin:0 0 10px; font-size:clamp(20px,2vw,26px); color:#fff; transform:rotate(-2deg); }
+.hp-name{
+  margin:0; padding:0; text-align:center;
+  font-size:clamp(64px,13.2vw,210px); line-height:.86; letter-spacing:-.03em;
+}
+.hp-name .hero-big-line{ display:block; white-space:nowrap; }
+/* when the WebGL particles take over, the DOM letters only hold the layout */
+.gl-name .hp-name .ch{ visibility:hidden; }
+
+.hp-hint{
+  margin:22px 0 0; font-size:10.5px; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.45);
+  opacity:0; transition:opacity 1.2s var(--ease) 1.6s;
+}
+.gl-name .hp-hint{ opacity:1; }
+.hp-hint-touch{ display:none; }
+@media (hover:none){ .hp-hint-fine{ display:none; } .hp-hint-touch{ display:inline; } }
+
+.hp-roles{ justify-content:center; margin:26px 0 0; }
+.hp-desc{ margin:14px 0 0; max-width:52ch; font-size:15.5px; line-height:1.7; color:rgba(255,255,255,.72); }
+.hp-cta{ justify-content:center; margin-top:26px; }
+
+.js .hp-hello, .js .hp-desc, .js .hp-cta{ opacity:0; translate:0 14px; transition:opacity 1s var(--ease), translate 1.2s var(--ease); }
+.is-ready .hp-hello{ opacity:1; translate:0 0; transition-delay:.1s; }
+.is-ready .hp-desc{ opacity:1; translate:0 0; transition-delay:1.15s; }
+.is-ready .hp-cta{ opacity:1; translate:0 0; transition-delay:1.3s; }
+
+@media (max-width:640px){
+  .hero-p{ padding:100px 0 60px; }
+  .hp-name{ font-size:clamp(46px,17.8vw,110px); }
+  .hp-roles{ font-size:15px; }
+  .hp-cta{ flex-direction:column; align-items:stretch; width:100%; max-width:360px; }
+  .hp-cta .btn{ justify-content:center; }
+}
+@media (prefers-reduced-motion: reduce){
+  .js .hp-hello, .js .hp-desc, .js .hp-cta{ opacity:1; translate:none; }
+}
+
+/* Canvas-2D fallback for the particle name */
+.hero-2d{ position:absolute; inset:0; width:100%; height:100%; z-index:0; pointer-events:none; }

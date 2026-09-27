@@ -3,35 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rayeesa Mahmood — Portfolio</title>
-<meta name="description" content="Rayeesa Mahmood — AI systems, full-stack web development, and UI/UX design. B.E. Computer Science & Engineering, Hyderabad, India.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Caveat:wght@600;700&display=swap">
+<title>Rayeesa Mahmood — Full-Stack Developer, AI Engineer & Healthcare AI Researcher</title>
+<meta name="description" content="Rayeesa Mahmood — full-stack developer, web designer, AI engineer and healthcare AI researcher in Hyderabad, India. Best Presenter ICSDE 2026, 3 published papers.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Rayeesa Mahmood — Portfolio">
+<meta property="og:description" content="AI agent systems, real-time web apps, and the interfaces that make them worth using.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rayeesamahmood.github.io/PORTFOLIO/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff7a30'/%3E%3Cstop offset='.55' stop-color='%23ffb238'/%3E%3Cstop offset='1' stop-color='%23ff4d6a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%23000'/%3E%3Ctext x='50%25' y='57%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial Black,Arial' font-weight='900' font-size='30' fill='url(%23g)'%3ERM%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
 <script>
   (function(){
-    /* Dark mode is the default. Only an explicit stored choice (via the on-page
-       toggle) ever changes it. Some embedding contexts re-stamp data-theme on
-       the root element to match a host's own light/dark setting — that would
-       silently flip this site back to light, so a MutationObserver keeps
-       re-asserting our own choice for the life of the page, not just once. */
+    /* Dark is the default. Only an explicit stored choice (via the on-page toggle) changes it. */
     var html = document.documentElement;
-    function wanted(){
-      var t = null;
-      try{ t = localStorage.getItem('theme'); }catch(e){}
-      return (t === 'light') ? 'light' : 'dark';
-    }
-    function enforce(){
-      var w = wanted();
-      if (html.getAttribute('data-theme') !== w) html.setAttribute('data-theme', w);
-    }
+    function wanted(){ var t=null; try{ t=localStorage.getItem('theme'); }catch(e){} return t==='light'?'light':'dark'; }
+    function enforce(){ var w=wanted(); if(html.getAttribute('data-theme')!==w) html.setAttribute('data-theme',w); }
     enforce();
-    if ('MutationObserver' in window) {
-      new MutationObserver(enforce).observe(html, { attributes: true, attributeFilter: ['data-theme'] });
-    }
+    if('MutationObserver' in window){ new MutationObserver(enforce).observe(html,{attributes:true,attributeFilter:['data-theme']}); }
+    html.classList.add('js');
   })();
 </script>
 <style>
+
 /* ============================================================
    RAYEESA MAHMOOD — PORTFOLIO
    Dark + light. Depth via layered glass + glow, not cartoon
@@ -1042,7 +1037,13 @@ img{max-width:100%; display:block;}
   .card-body{ padding:24px 20px 26px; }
 }
 
+
 </style>
+<link rel="stylesheet" href="css/v2.css">
+<link rel="stylesheet" href="css/v3.css">
+<link rel="stylesheet" href="css/tour.css">
+<link rel="stylesheet" href="css/hero.css?v=3">
+<link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
 
@@ -1050,14 +1051,12 @@ img{max-width:100%; display:block;}
 <div class="preloader" id="preloader">
   <div class="preloader-glow" aria-hidden="true"></div>
   <div class="preloader-grid" aria-hidden="true"></div>
-
   <div class="preloader-stage">
     <span class="preloader-corner tl" aria-hidden="true"></span>
     <span class="preloader-corner tr" aria-hidden="true"></span>
     <span class="preloader-corner bl" aria-hidden="true"></span>
     <span class="preloader-corner br" aria-hidden="true"></span>
-
-    <div class="preloader-name" id="preloaderName">
+    <div class="preloader-name">
       <div class="preloader-name-clip">
         <svg class="preloader-svg" viewBox="0 0 900 190" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Rayeesa Mahmood">
           <defs>
@@ -1069,191 +1068,106 @@ img{max-width:100%; display:block;}
           </defs>
           <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle">Rayeesa Mahmood</text>
         </svg>
-        <span class="preloader-pen" id="preloaderPen" aria-hidden="true"></span>
+        <span class="preloader-pen" aria-hidden="true"></span>
       </div>
       <span class="preloader-underline" aria-hidden="true"></span>
     </div>
-
-    <p class="preloader-tagline mono">AI&nbsp;Developer &nbsp;·&nbsp; Full-Stack Engineer &nbsp;·&nbsp; UI/UX Designer</p>
-
-    <div class="preloader-progress" aria-hidden="true">
-      <span class="preloader-progress-bar" id="preloaderBar"></span>
-    </div>
+    <p class="preloader-tagline mono">Full-Stack&nbsp;Developer &nbsp;·&nbsp; AI Engineer &nbsp;·&nbsp; Healthcare AI Researcher</p>
+    <div class="preloader-progress" aria-hidden="true"><span class="preloader-progress-bar"></span></div>
   </div>
 </div>
-<noscript><style>#preloader{display:none !important;}</style></noscript>
+<noscript><style>#preloader{display:none !important;} .reveal{opacity:1 !important; transform:none !important;} .hero-big .ch{transform:none !important; opacity:1 !important;}</style></noscript>
 <script>
   (function(){
-    var pre = document.getElementById('preloader');
-    if(!pre) return;
-    var html = document.documentElement;
-    var reduceMotion = false;
-    try{ reduceMotion = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(e){}
-
-    var hidden = false;
+    var pre=document.getElementById('preloader'); if(!pre) return;
+    var html=document.documentElement, reduce=false;
+    try{ reduce=matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(e){}
+    var hidden=false;
     function hide(){
-      if(hidden) return;
-      hidden = true;
-      pre.classList.add('is-hidden');
-      html.classList.remove('is-loading');
-      window.setTimeout(function(){
-        if(pre && pre.parentNode) pre.parentNode.removeChild(pre);
-      }, 700);
+      if(hidden) return; hidden=true;
+      pre.classList.add('is-hidden'); html.classList.remove('is-loading'); html.classList.add('is-ready');
+      window.dispatchEvent(new Event('portfolio:ready'));
+      setTimeout(function(){ if(pre.parentNode) pre.parentNode.removeChild(pre); }, 700);
     }
-
-    if(reduceMotion){
-      hide();
-      return;
-    }
-
+    if(reduce){ hide(); return; }
     html.classList.add('is-loading');
-
-    var minShown = 3000; /* the full choreographed sequence + progress bar */
-    var maxShown = 6000; /* hard safety cap even if the page never fires load */
-    var start = Date.now();
-    var loaded = false;
-
-    function ready(){
-      if(loaded) return;
-      loaded = true;
-      var elapsed = Date.now() - start;
-      window.setTimeout(hide, Math.max(0, minShown - elapsed));
-    }
-
-    if(document.readyState === 'complete'){
-      ready();
-    }else{
-      window.addEventListener('load', ready, { once:true });
-    }
-    window.setTimeout(hide, maxShown);
+    var start=Date.now(), minShown=2300, loaded=false;
+    function ready(){ if(loaded) return; loaded=true; setTimeout(hide, Math.max(0, minShown-(Date.now()-start))); }
+    if(document.readyState==='complete') ready(); else window.addEventListener('load', ready, {once:true});
+    setTimeout(hide, 5000);
   })();
 </script>
 
 <div class="bg-fx" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
 <!-- ══════════════════════════ NAV ══════════════════════════ -->
 <header class="nav" id="top">
   <div class="nav-inner">
-    <a href="#top" class="brand">Rayeesa<span class="brand-dot">.</span></a>
-    <nav class="nav-links" id="navLinks">
+    <a href="#hero" class="brand">Rayeesa<span class="brand-dot">.</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Sections">
       <a href="#about">About</a>
       <a href="#work">Work</a>
       <a href="#design">Design</a>
-      <a href="#toolkit">Toolkit</a>
+      <a href="#toolkit">Stack</a>
       <a href="#experience">Experience</a>
-      <a href="#community">Community</a>
+      <a href="#research">Research</a>
       <a href="#certificates">Certificates</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark / light theme">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch between dark and light theme">
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"></circle><path d="M12 2.5v2.4M12 19.1v2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"></path></svg>
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1110 3.2a6.8 6.8 0 000 13.6 8.4 8.4 0 0010-2.3z"></path></svg>
       </button>
-      <a class="btn btn-sm btn-outline" href="resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <a class="btn btn-sm btn-outline" href="#resume">Résumé &amp; CV</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </header>
 
+<main>
 <!-- ══════════════════════════ HERO ══════════════════════════ -->
-<section class="hero" id="hero">
-  <canvas id="heroStarfield" class="hero-starfield" aria-hidden="true"></canvas>
-
+<section class="hero hero-p" id="hero">
+  <canvas id="heroGL" class="hero-starfield" aria-hidden="true"></canvas>
   <div class="hero-nebula hero-nebula-a" aria-hidden="true"></div>
   <div class="hero-nebula hero-nebula-b" aria-hidden="true"></div>
-  <div class="hero-nebula hero-nebula-c" aria-hidden="true"></div>
-
-  <svg class="hero-orbit-ring" viewBox="0 0 1400 1400" fill="none" aria-hidden="true">
-    <ellipse cx="700" cy="700" rx="640" ry="230" stroke="url(#heroRingGrad)" stroke-width="1"/>
-    <ellipse cx="700" cy="700" rx="460" ry="165" stroke="url(#heroRingGrad)" stroke-width="1"/>
-    <defs>
-      <linearGradient id="heroRingGrad" x1="0" y1="0" x2="1400" y2="1400" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" class="grad-stop-a"></stop>
-        <stop offset="55%" class="grad-stop-b"></stop>
-        <stop offset="100%" class="grad-stop-c"></stop>
-      </linearGradient>
-    </defs>
-  </svg>
-
   <div class="hero-scrim" aria-hidden="true"></div>
-  <div class="hero-beam" aria-hidden="true"></div>
 
-  <span class="hero-corner tl" aria-hidden="true"></span>
-  <span class="hero-corner tr" aria-hidden="true"></span>
-  <span class="hero-corner bl" aria-hidden="true"></span>
-  <span class="hero-corner br" aria-hidden="true"></span>
-
-  <div class="hero-top reveal">
-    <span class="hero-eyebrow-line script">Helloooow, I'm —</span>
-    <span class="hero-badge">
-      <span class="hero-badge-tag">AI</span>
-      <span class="hero-badge-text">Developer &nbsp;·&nbsp; Full-Stack Engineer &nbsp;·&nbsp; UI/UX Designer</span>
-    </span>
-  </div>
-
-  <div class="id-card tilt reveal">
-    <div class="id-card-label">Property of</div>
-    <div class="id-card-divider"></div>
-    <div class="id-card-meta">
-      B.E. CSE '26 · CGPA 8.66 / 10<br>
-      Hyderabad, India · Co-Founder, Bizzapt Enterprises
-    </div>
-  </div>
-
-  <h1 class="hero-big reveal" id="heroName" aria-label="Rayeesa Mahmood">
-    <span class="hero-big-line">RAYEESA</span>
-    <span class="hero-big-line hero-big-line-fill">MAHMOOD</span>
-  </h1>
-
-  <div class="hero-panel reveal">
-    <p class="hero-desc">
-      I build AI-integrated products — multi-agent systems, REST APIs and real-time
-      applications — and design the interfaces that make them worth using.
-      Computer Science &amp; Engineering graduate based in Hyderabad, India.
+  <div class="hp-inner">
+    <p class="hp-hello script">Helloooow, I'm —</p>
+    <h1 class="hero-big hp-name" id="heroName" aria-label="Rayeesa Mahmood">
+      <span class="hero-big-line" data-split>RAYEESA</span>
+      <span class="hero-big-line hero-big-line-fill" data-split>MAHMOOD</span>
+    </h1>
+    <p class="hp-hint mono" aria-hidden="true"><span class="hp-hint-fine">move your cursor through my name</span><span class="hp-hint-touch">touch my name</span> · click to scatter</p>
+    <p class="hero-roles hp-roles">
+      <span>Full-Stack Developer</span><i aria-hidden="true">✦</i><span>AI Engineer</span><i aria-hidden="true">✦</i><span>Researcher in Healthcare AI</span>
     </p>
-    <div class="hero-cta">
-      <a href="#work" class="btn btn-primary">View Selected Work</a>
-      <a href="resume.pdf" target="_blank" rel="noopener" class="btn btn-outline">Résumé ↗</a>
-      <a href="mailto:rayeesamahmood8098@gmail.com" class="btn btn-text">Get in touch →</a>
+    <p class="hp-desc">I design and build websites and web apps end to end, and research how AI agents can take paperwork off hospital staff.</p>
+    <div class="hero-cta hp-cta">
+      <a href="#work" class="btn btn-primary magnetic">View Selected Work</a>
+      <a href="#resume" class="btn btn-outline magnetic">Résumé &amp; CV</a>
+      <a href="#contact" class="btn btn-text">Get in touch →</a>
     </div>
   </div>
-
-  <a href="#about" class="scroll-cue" aria-label="Scroll to About">
-    <span>Scroll</span>
-    <i></i>
-  </a>
 </section>
 
-<!-- ══════════════════════════ HERO STATS TICKER ══════════════════════════ -->
-<div class="hero-stats reveal" aria-label="Quick stats">
-  <div class="hero-stat">
-    <span class="hero-stat-value">1</span>
-    <span class="hero-stat-label">Guinness World Record</span>
-  </div>
-  <div class="hero-stat">
-    <span class="hero-stat-value">5+</span>
-    <span class="hero-stat-label">Shipped Products</span>
-  </div>
-  <div class="hero-stat">
-    <span class="hero-stat-value">3</span>
-    <span class="hero-stat-label">Research Papers</span>
-  </div>
-  <div class="hero-stat">
-    <span class="hero-stat-value">8.66</span>
-    <span class="hero-stat-label">CGPA / 10</span>
-  </div>
+<!-- ══════════════════════════ STATS ══════════════════════════ -->
+<div class="hero-stats" aria-label="Quick stats">
+  <div class="hero-stat"><span class="hero-stat-value" data-count="5" data-suffix="+">5+</span><span class="hero-stat-label">Live web apps shipped</span></div>
+  <div class="hero-stat"><span class="hero-stat-value" data-count="3">3</span><span class="hero-stat-label">Healthcare &amp; AI papers</span></div>
+  <div class="hero-stat"><span class="hero-stat-value" data-count="1200" data-sep="1">1,200</span><span class="hero-stat-label">Patients through my AI pipeline</span></div>
+  <div class="hero-stat"><span class="hero-stat-value" data-count="8.66" data-decimals="2">8.66</span><span class="hero-stat-label">CGPA / 10</span></div>
 </div>
 
-<!-- ══════════════════════════ MARQUEE ══════════════════════════ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Shipped</span><span>Presented</span><span>Led</span><span>Mentored</span>
-    <span>Shipped</span><span>Presented</span><span>Led</span><span>Mentored</span>
-    <span>Shipped</span><span>Presented</span><span>Led</span><span>Mentored</span>
-    <span>Shipped</span><span>Presented</span><span>Led</span><span>Mentored</span>
+    <span>React</span><i>✦</i><span>Python</span><i>✦</i><span>Flask</span><i>✦</i><span>Node.js</span><i>✦</i><span>Firebase</span><i>✦</i><span>Claude API</span><i>✦</i><span>Figma</span><i>✦</i><span>REST APIs</span><i>✦</i><span>Vercel</span><i>✦</i>
+    <span>React</span><i>✦</i><span>Python</span><i>✦</i><span>Flask</span><i>✦</i><span>Node.js</span><i>✦</i><span>Firebase</span><i>✦</i><span>Claude API</span><i>✦</i><span>Figma</span><i>✦</i><span>REST APIs</span><i>✦</i><span>Vercel</span><i>✦</i>
   </div>
 </div>
 
@@ -1262,154 +1176,119 @@ img{max-width:100%; display:block;}
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">01 · About</span>
-      <h2 class="h2">I build the system, <em>then</em> make it deliver.</h2>
+      <h2 class="h2">I design it, build it, <em>and</em> ship it.</h2>
     </div>
 
-    <div class="capabilities-grid">
-      <a href="#work" class="capability-card tilt reveal">
-        <div class="capability-icon" style="--icon-bg:linear-gradient(150deg,#ff7a30,#ffb238);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.5"></rect><path d="M12 3v4M12 17v4M3 12h4M17 12h4M7 7L4 4M17 7l3-3M7 17l-3 3M17 17l3 3"></path></svg>
-        </div>
-        <h3 class="capability-title">AI &amp; Agents</h3>
-        <p class="capability-desc">Multi-agent pipelines and applied AI research, shipped and live — not just demos.</p>
-        <span class="capability-link">Learn more <i>→</i></span>
-      </a>
-
-      <a href="#toolkit" class="capability-card tilt reveal">
-        <div class="capability-icon" style="--icon-bg:linear-gradient(150deg,#2a6df0,#63a1ff);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4L3 12l5 8M16 4l5 8-5 8"></path></svg>
-        </div>
-        <h3 class="capability-title">Full-Stack Development</h3>
-        <p class="capability-desc">React front ends, Python backends, and the infrastructure that keeps them running.</p>
-        <span class="capability-link">Learn more <i>→</i></span>
-      </a>
-
-      <a href="#design" class="capability-card tilt reveal">
-        <div class="capability-icon" style="--icon-bg:linear-gradient(150deg,#ff6fa8,#ffa8cd);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14120f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="1.5"></rect><path d="M3 9h18M9 9v9M15 9v9"></path></svg>
-        </div>
-        <h3 class="capability-title">UI/UX Design</h3>
-        <p class="capability-desc">Wireframes to shipped pixels — the whole process, not just the mockups.</p>
-        <span class="capability-link">Learn more <i>→</i></span>
-      </a>
-
-      <a href="#community" class="capability-card tilt reveal">
-        <div class="capability-icon" style="--icon-bg:linear-gradient(150deg,#4fd1e0,#9be8f0);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14120f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.4"></circle><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14.5 14.3c2.6.4 4.5 2.6 4.5 5.7"></path></svg>
-        </div>
-        <h3 class="capability-title">Leadership &amp; Community</h3>
-        <p class="capability-desc">Running clubs, judging hackathons, mentoring the next batch of builders.</p>
-        <span class="capability-link">Learn more <i>→</i></span>
-      </a>
-    </div>
-
-    <div class="about-grid">
+    <div class="about-v3">
       <div class="about-copy reveal">
-        <p class="lead">
-          I'm a Computer Science &amp; Engineering graduate who spent four years saying yes —
-          to hackathons, to teaching juniors, to running the club, to co-founding a company,
-          to presenting research at a conference. Somewhere in there I worked out that I like
-          the whole arc: the messy problem, the interface that makes it obvious, and the
-          deploy at 2am that finally works.
+        <p class="lead lead-lg">
+          I'm a full-stack developer and web designer from Hyderabad. I like owning the whole
+          thing: the wireframe, the interface, the API behind it, and the deploy at 2am that finally works.
         </p>
         <p class="lead">
-          Lately that means <span class="mark">AI agents</span> doing real administrative work,
-          healthcare tools that respect people's time, and interfaces I'd actually want to use myself.
+          My research sits in <span class="mark">healthcare AI</span> — multi-agent systems that handle
+          claims, scheduling and patient records so hospital staff don't have to. Three papers so far,
+          and a Best Presenter award at ICSDE 2026 for the latest one.
         </p>
-
-        <div class="kv-list">
-          <div class="kv"><span class="kv-k">Based in</span><span class="kv-v">Hyderabad, India</span></div>
-          <div class="kv"><span class="kv-k">Graduated</span><span class="kv-v">B.E. Computer Science &amp; Engineering — Lords Institute of Engineering &amp; Technology · CGPA 8.66 / 10</span></div>
-          <div class="kv"><span class="kv-k">Currently</span><span class="kv-v">Co-Founder at Bizzapt Enterprises</span></div>
-          <div class="kv"><span class="kv-k">Focus areas</span><span class="kv-v">AI agents, full-stack web development, UI/UX design</span></div>
-        </div>
+        <p class="lead">
+          Before all that I spent four years saying yes: to hackathons, to teaching juniors, to running
+          the club, and to co-founding Bizzapt Enterprises.
+        </p>
       </div>
 
-      <div class="about-photo-wrap reveal">
-        <div class="about-photo-frame tilt">
-          <div class="about-photo-glow" aria-hidden="true"></div>
-          <span class="about-photo-pin" aria-hidden="true"></span>
-          <div class="about-photo">
-            <img src="images/profile.jpg" alt="Rayeesa Mahmood" loading="lazy">
-            <div class="about-photo-grid" aria-hidden="true"></div>
-            <span class="about-photo-corner tl" aria-hidden="true"></span>
-            <span class="about-photo-corner tr" aria-hidden="true"></span>
-            <span class="about-photo-corner bl" aria-hidden="true"></span>
-            <span class="about-photo-corner br" aria-hidden="true"></span>
-            <div class="about-photo-tag">Builder · Mentor · Designer</div>
-          </div>
-        </div>
+      <div class="code-card tilt reveal" aria-label="Quick facts">
+        <div class="code-card-bar"><span class="lyr-dot"></span><span class="lyr-dot"></span><span class="lyr-dot"></span><b>rayeesa.ts</b></div>
+<pre class="code code-static"><span class="ln">1</span><span class="k">const</span> <span class="v">rayeesa</span> = {
+<span class="ln">2</span>  <span class="p">role</span>: [<span class="s">"Full-Stack Developer"</span>, <span class="s">"AI Engineer"</span>,
+<span class="ln">3</span>         <span class="s">"Healthcare AI Researcher"</span>],
+<span class="ln">4</span>  <span class="p">based</span>: <span class="s">"Hyderabad, India"</span>,
+<span class="ln">5</span>  <span class="p">education</span>: <span class="s">"B.E. CSE · CGPA 8.66"</span>,
+<span class="ln">6</span>  <span class="p">now</span>: <span class="s">"Co-Founder @ Bizzapt Enterprises"</span>,
+<span class="ln">7</span>  <span class="p">frontend</span>: [<span class="s">"React"</span>, <span class="s">"HTML/CSS"</span>, <span class="s">"Figma"</span>],
+<span class="ln">8</span>  <span class="p">backend</span>: [<span class="s">"Python"</span>, <span class="s">"Flask"</span>, <span class="s">"Node.js"</span>, <span class="s">"Firebase"</span>],
+<span class="ln">9</span>  <span class="p">ai</span>: [<span class="s">"Claude API"</span>, <span class="s">"multi-agent systems"</span>],
+<span class="ln">10</span> <span class="p">papers</span>: <span class="n">3</span>,
+<span class="ln">11</span> <span class="p">learning</span>: <span class="s">"always"</span>,
+<span class="ln">12</span>};<span class="caret"></span></pre>
       </div>
     </div>
 
-    <!-- journey timeline -->
+    <div class="services">
+      <article class="service tilt reveal">
+        <div class="service-ic" style="--icon-bg:linear-gradient(150deg,#ff6fa8,#ffa8cd);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14120f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="1.5"></rect><path d="M3 9h18M9 9v9"></path></svg></div>
+        <h3>Web design</h3>
+        <p>Brand sites and landing pages that explain a business in one scroll.</p>
+        <ul><li>Wireframes and Figma designs</li><li>Type, colour and brand systems</li><li>Responsive, mobile-first layouts</li></ul>
+        <a class="service-link" href="#design">See Bizzapt, sketch to shipped <i>→</i></a>
+      </article>
+      <article class="service tilt reveal">
+        <div class="service-ic" style="--icon-bg:linear-gradient(150deg,#2a6df0,#63a1ff);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4L3 12l5 8M16 4l5 8-5 8"></path></svg></div>
+        <h3>Full-stack development</h3>
+        <p>Web apps with a real backend: accounts, live data, dashboards.</p>
+        <ul><li>React and JavaScript front ends</li><li>REST APIs in Flask and Node.js</li><li>Firebase real-time data, Vercel deploys</li></ul>
+        <a class="service-link" href="#work">See RayCare, live queue <i>→</i></a>
+      </article>
+      <article class="service tilt reveal">
+        <div class="service-ic" style="--icon-bg:linear-gradient(150deg,#ff7a30,#ffb238);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.5"></rect><path d="M12 3v4M12 17v4M3 12h4M17 12h4"></path></svg></div>
+        <h3>AI engineering</h3>
+        <p>LLM features and agent pipelines wired into products people use.</p>
+        <ul><li>Claude API integration</li><li>Multi-agent workflows</li><li>Healthcare and admin automation</li></ul>
+        <a class="service-link" href="#research">See the research <i>→</i></a>
+      </article>
+    </div>
+
     <div class="journey reveal">
       <div class="journey-head">
         <h3 class="h3">The path here</h3>
-        <span class="lead-sm">Curiosity → community → building products that matter</span>
+        <span class="lead-sm">Curiosity → community → building products that matter <span class="journey-hint">· drag to explore</span></span>
       </div>
-      <div class="journey-track">
-        <div class="journey-node">
-          <div class="journey-num">01</div>
-          <div class="journey-title">Nalanda Public School</div>
-          <div class="journey-desc">Where the curiosity started — how does a machine understand language and instructions?</div>
-        </div>
-        <div class="journey-node">
-          <div class="journey-num">02</div>
-          <div class="journey-title">Java &amp; curiosity</div>
-          <div class="journey-desc">Intermediate (MPC): Java became my first deep dive into how code turns ideas into action.</div>
-        </div>
-        <div class="journey-node">
-          <div class="journey-num">03</div>
-          <div class="journey-title">Lords Institute of Engineering &amp; Technology</div>
-          <div class="journey-desc">Started my B.E. in Computer Science &amp; Engineering and began exploring every opportunity around me.</div>
-        </div>
-        <div class="journey-node">
-          <div class="journey-num">04</div>
-          <div class="journey-title">Community builder</div>
-          <div class="journey-desc">Joined Lords E-Cell, IEEE, the Orators Club, Mobile Development Club and CodeWave Hub.</div>
-        </div>
-        <div class="journey-node">
-          <div class="journey-num">05</div>
-          <div class="journey-title">Open source &amp; peers</div>
-          <div class="journey-desc">Learned by building in public — GitHub, open-source projects, seniors and peers as my support system.</div>
-        </div>
-        <div class="journey-node">
-          <div class="journey-num">06</div>
-          <div class="journey-title">HackPrix organizer</div>
-          <div class="journey-desc">Grew from participant to organizer and mentor; HackPrix at Lords reached around 1,500 students.</div>
-        </div>
-        <div class="journey-node">
-          <div class="journey-num">07</div>
-          <div class="journey-title">Mentor &amp; leader</div>
-          <div class="journey-desc">Organized hackathons, taught juniors, and helped teams build the confidence to ship.</div>
-        </div>
-        <div class="journey-node">
-          <div class="journey-num">08</div>
-          <div class="journey-title">Bizzapt Enterprises</div>
-          <div class="journey-desc">Co-founded a tech &amp; digital company, building toward AI automation and smarter products.</div>
-        </div>
-
+      <div class="journey-rail" aria-hidden="true"><span id="journeyFill"></span></div>
+      <div class="journey-track" id="journeyTrack">
+        <div class="journey-node"><div class="journey-num">01</div><div class="journey-title">Nalanda Public School</div><div class="journey-desc">Where the curiosity started — how does a machine understand language and instructions?</div></div>
+        <div class="journey-node"><div class="journey-num">02</div><div class="journey-title">Java &amp; curiosity</div><div class="journey-desc">Intermediate (MPC): Java became my first deep dive into how code turns ideas into action.</div></div>
+        <div class="journey-node"><div class="journey-num">03</div><div class="journey-title">Lords Institute of Engineering &amp; Technology</div><div class="journey-desc">Started my B.E. in Computer Science &amp; Engineering and began exploring every opportunity around me.</div></div>
+        <div class="journey-node"><div class="journey-num">04</div><div class="journey-title">Community builder</div><div class="journey-desc">Joined Lords E-Cell, IEEE, the Orators Club, Mobile Development Club and CodeWave Hub.</div></div>
+        <div class="journey-node"><div class="journey-num">05</div><div class="journey-title">Open source &amp; peers</div><div class="journey-desc">Learned by building in public — GitHub, open-source projects, seniors and peers as my support system.</div></div>
+        <div class="journey-node"><div class="journey-num">06</div><div class="journey-title">HackPrix organizer</div><div class="journey-desc">Grew from participant to organizer and mentor; HackPrix at Lords reached around 1,500 students.</div></div>
+        <div class="journey-node"><div class="journey-num">07</div><div class="journey-title">Mentor &amp; leader</div><div class="journey-desc">Organized hackathons, taught juniors, and helped teams build the confidence to ship.</div></div>
+        <div class="journey-node journey-node-now"><div class="journey-num">08 · now</div><div class="journey-title">Bizzapt Enterprises</div><div class="journey-desc">Co-founded a tech &amp; digital company, building toward AI automation and smarter products.</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════ SELECTED WORK ══════════════════════════ -->
-<section class="section section-alt" id="work">
-  <div class="section-beam-wrap" aria-hidden="true"><div class="section-beam"></div></div>
-  <div class="wrap">
-    <div class="section-head split reveal">
-      <div>
-        <span class="eyebrow">02 · Selected Work</span>
-        <h2 class="h2">Shipped, live, and still warm from the deploy.</h2>
-      </div>
-      <p class="script section-note">all of these are live — go click them ↓</p>
+<!-- ══════════════════════════ SELECTED WORK: TOUR ══════════════════════════ -->
+<section class="work-tour" id="work" aria-labelledby="workTitle">
+  <header class="tour-intro">
+    <div class="tour-intro-copy reveal">
+      <span class="eyebrow">02 · Selected Work</span>
+      <h2 class="tour-title" id="workTitle"><span>Explore</span><span>selected</span><span class="grad-text">work</span></h2>
+      <p class="lead">Four live products, from a hospital queue to an AI operating layer. Scroll through them, or let the tour drive.</p>
     </div>
+    <div class="tour-index reveal">
+      <p class="tour-index-label mono">In this tour</p>
+      <ol>
+        <li><button type="button" data-tour-go="0"><span class="ti-n mono">01</span><span class="ti-name">AuraOS</span><span class="ti-k">AI operating layer</span><i aria-hidden="true">→</i></button></li>
+        <li><button type="button" data-tour-go="1"><span class="ti-n mono">02</span><span class="ti-name">MediCore AI</span><span class="ti-k">Healthcare AI platform</span><i aria-hidden="true">→</i></button></li>
+        <li><button type="button" data-tour-go="2"><span class="ti-n mono">03</span><span class="ti-name">RayCare Queue</span><span class="ti-k">Real-time hospital queue</span><i aria-hidden="true">→</i></button></li>
+        <li><button type="button" data-tour-go="3"><span class="ti-n mono">04</span><span class="ti-name">Bizzapt</span><span class="ti-k">Brand &amp; website</span><i aria-hidden="true">→</i></button></li>
+      </ol>
+      <button type="button" class="skew-btn magnetic" id="tourBtn" aria-pressed="false">
+        <span class="skew-btn-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg><span id="tourBtnText">Take me on a tour</span></span>
+      </button>
+    </div>
+  </header>
 
-    <!-- Featured: AuraOS -->
-    <a href="https://ai-operating-layer-interface.vercel.app/" target="_blank" rel="noopener" class="card card-featured tilt reveal">
-      <div class="card-media card-media-dark">
+  <div class="tour-track" id="tourTrack">
+    <div class="tour-stage">
+      <div class="tour-counter mono" aria-live="polite"><b id="tourNum">01</b> of <span>04</span></div>
+      <div class="tour-progress" aria-hidden="true"><span id="tourBar"></span></div>
+
+      <!-- 1 · AuraOS -->
+      <article class="tour-item" data-accent="#67e8f9" aria-labelledby="t-aura">
+        <h3 class="tour-name" id="t-aura">AuraOS</h3>
+        <div class="devices">
+          <div class="monitor"><div class="monitor-bezel"><div class="scr scr-dark"><div class="scr-inner">
 
             <svg viewBox="0 0 120 120" preserveAspectRatio="xMidYMid slice" style="position:absolute; right:-14%; top:50%; transform:translateY(-50%); width:62%; height:118%; opacity:.95;">
               <circle cx="8.0" cy="6.0" r=".9" fill="#cffafe" opacity="0.12"></circle><circle cx="46.5" cy="82.7" r=".9" fill="#cffafe" opacity="0.28"></circle><circle cx="85.0" cy="51.4" r=".9" fill="#cffafe" opacity="0.14"></circle><circle cx="19.4" cy="20.0" r=".9" fill="#cffafe" opacity="0.30"></circle><circle cx="57.9" cy="96.7" r=".9" fill="#cffafe" opacity="0.16"></circle><circle cx="96.4" cy="65.4" r=".9" fill="#cffafe" opacity="0.32"></circle><circle cx="30.9" cy="34.1" r=".9" fill="#cffafe" opacity="0.17"></circle><circle cx="69.4" cy="110.8" r=".9" fill="#cffafe" opacity="0.33"></circle><circle cx="107.8" cy="79.4" r=".9" fill="#cffafe" opacity="0.19"></circle><circle cx="42.3" cy="48.1" r=".9" fill="#cffafe" opacity="0.35"></circle><circle cx="80.8" cy="16.8" r=".9" fill="#cffafe" opacity="0.21"></circle><circle cx="15.3" cy="93.5" r=".9" fill="#cffafe" opacity="0.37"></circle><circle cx="53.8" cy="62.2" r=".9" fill="#cffafe" opacity="0.23"></circle><circle cx="92.2" cy="30.8" r=".9" fill="#cffafe" opacity="0.39"></circle><circle cx="26.7" cy="107.5" r=".9" fill="#cffafe" opacity="0.25"></circle><circle cx="65.2" cy="76.2" r=".9" fill="#cffafe" opacity="0.40"></circle><circle cx="103.7" cy="44.9" r=".9" fill="#cffafe" opacity="0.26"></circle><circle cx="38.2" cy="13.6" r=".9" fill="#cffafe" opacity="0.12"></circle><circle cx="76.6" cy="90.2" r=".9" fill="#cffafe" opacity="0.28"></circle><circle cx="11.1" cy="58.9" r=".9" fill="#cffafe" opacity="0.14"></circle><circle cx="49.6" cy="27.6" r=".9" fill="#cffafe" opacity="0.30"></circle><circle cx="88.1" cy="104.3" r=".9" fill="#cffafe" opacity="0.16"></circle><circle cx="22.6" cy="73.0" r=".9" fill="#cffafe" opacity="0.32"></circle><circle cx="61.0" cy="41.6" r=".9" fill="#cffafe" opacity="0.18"></circle><circle cx="99.5" cy="10.3" r=".9" fill="#cffafe" opacity="0.34"></circle><circle cx="34.0" cy="87.0" r=".9" fill="#cffafe" opacity="0.20"></circle><circle cx="72.5" cy="55.7" r=".9" fill="#cffafe" opacity="0.35"></circle><circle cx="111.0" cy="24.4" r=".9" fill="#cffafe" opacity="0.21"></circle><circle cx="45.4" cy="101.0" r=".9" fill="#cffafe" opacity="0.37"></circle><circle cx="83.9" cy="69.7" r=".9" fill="#cffafe" opacity="0.23"></circle><circle cx="18.4" cy="38.4" r=".9" fill="#cffafe" opacity="0.39"></circle><circle cx="56.9" cy="7.1" r=".9" fill="#cffafe" opacity="0.25"></circle><circle cx="95.4" cy="83.8" r=".9" fill="#cffafe" opacity="0.41"></circle><circle cx="29.8" cy="52.4" r=".9" fill="#cffafe" opacity="0.27"></circle><ellipse cx="60" cy="60" rx="14" ry="52" fill="none" stroke="#67e8f9" stroke-width=".7" opacity=".33"></ellipse><ellipse cx="60" cy="60" rx="28" ry="52" fill="none" stroke="#67e8f9" stroke-width=".7" opacity=".33"></ellipse><ellipse cx="60" cy="60" rx="42" ry="52" fill="none" stroke="#67e8f9" stroke-width=".7" opacity=".33"></ellipse><ellipse cx="60" cy="60" rx="52" ry="52" fill="none" stroke="#67e8f9" stroke-width=".7" opacity=".33"></ellipse><ellipse cx="60" cy="60" rx="52" ry="14" fill="none" stroke="#67e8f9" stroke-width=".7" opacity=".28"></ellipse><ellipse cx="60" cy="60" rx="52" ry="28" fill="none" stroke="#67e8f9" stroke-width=".7" opacity=".28"></ellipse><ellipse cx="60" cy="60" rx="52" ry="42" fill="none" stroke="#67e8f9" stroke-width=".7" opacity=".28"></ellipse><circle cx="64.8" cy="60.0" r="1.1" fill="#67e8f9" opacity="0.74"></circle><circle cx="53.9" cy="65.4" r="1.1" fill="#67e8f9" opacity="0.70"></circle><circle cx="60.9" cy="49.7" r="1.1" fill="#67e8f9" opacity="0.67"></circle><circle cx="67.7" cy="69.6" r="1.1" fill="#67e8f9" opacity="0.65"></circle><circle cx="45.8" cy="57.6" r="1.1" fill="#67e8f9" opacity="0.63"></circle><circle cx="73.4" cy="51.7" r="1.1" fill="#67e8f9" opacity="0.61"></circle><circle cx="55.6" cy="76.1" r="1.1" fill="#67e8f9" opacity="0.59"></circle><circle cx="51.3" cy="44.2" r="1.1" fill="#67e8f9" opacity="0.58"></circle><circle cx="78.6" cy="66.4" r="1.1" fill="#67e8f9" opacity="0.56"></circle><circle cx="40.7" cy="67.8" r="1.1" fill="#67e8f9" opacity="0.55"></circle><circle cx="69.1" cy="40.8" r="1.1" fill="#67e8f9" opacity="0.54"></circle><circle cx="67.1" cy="81.0" r="1.1" fill="#67e8f9" opacity="0.53"></circle><circle cx="39.1" cy="48.7" r="1.1" fill="#67e8f9" opacity="0.51"></circle><circle cx="84.3" cy="54.6" r="1.1" fill="#67e8f9" opacity="0.50"></circle><circle cx="45.4" cy="80.5" r="1.1" fill="#67e8f9" opacity="0.49"></circle><circle cx="56.2" cy="34.6" r="1.1" fill="#67e8f9" opacity="0.48"></circle><circle cx="81.3" cy="76.7" r="1.1" fill="#67e8f9" opacity="0.47"></circle><circle cx="31.7" cy="61.6" r="1.1" fill="#67e8f9" opacity="0.46"></circle><circle cx="80.3" cy="39.9" r="1.1" fill="#67e8f9" opacity="0.45"></circle><circle cx="59.2" cy="88.7" r="1.1" fill="#67e8f9" opacity="0.44"></circle><circle cx="39.9" cy="37.7" r="1.1" fill="#67e8f9" opacity="0.43"></circle><circle cx="91.2" cy="63.4" r="1.1" fill="#67e8f9" opacity="0.42"></circle><circle cx="34.0" cy="78.2" r="1.1" fill="#67e8f9" opacity="0.42"></circle><circle cx="66.5" cy="29.1" r="1.1" fill="#67e8f9" opacity="0.41"></circle><circle cx="77.4" cy="87.6" r="1.1" fill="#67e8f9" opacity="0.40"></circle><circle cx="27.1" cy="50.8" r="1.1" fill="#67e8f9" opacity="0.39"></circle><circle cx="91.3" cy="45.2" r="1.1" fill="#67e8f9" opacity="0.38"></circle><circle cx="47.1" cy="91.8" r="1.1" fill="#67e8f9" opacity="0.37"></circle><circle cx="46.8" cy="27.6" r="1.1" fill="#67e8f9" opacity="0.37"></circle><circle cx="93.1" cy="75.6" r="1.1" fill="#67e8f9" opacity="0.36"></circle><circle cx="24.1" cy="70.2" r="1.1" fill="#67e8f9" opacity="0.35"></circle><circle cx="79.6" cy="28.7" r="1.1" fill="#67e8f9" opacity="0.34"></circle><circle cx="67.7" cy="96.4" r="1.1" fill="#67e8f9" opacity="0.34"></circle><circle cx="28.2" cy="37.9" r="1.1" fill="#67e8f9" opacity="0.33"></circle><circle cx="99.6" cy="55.6" r="1.1" fill="#67e8f9" opacity="0.32"></circle><circle cx="33.6" cy="89.3" r="1.1" fill="#67e8f9" opacity="0.32"></circle><circle cx="58.8" cy="20.7" r="1.1" fill="#67e8f9" opacity="0.31"></circle><circle cx="89.0" cy="88.6" r="1.1" fill="#67e8f9" opacity="0.30"></circle><circle cx="18.0" cy="57.7" r="1.1" fill="#67e8f9" opacity="0.30"></circle><circle cx="93.0" cy="34.1" r="1.1" fill="#67e8f9" opacity="0.29"></circle><circle cx="53.9" cy="101.0" r="1.1" fill="#67e8f9" opacity="0.28"></circle><circle cx="35.3" cy="25.4" r="1.1" fill="#67e8f9" opacity="0.28"></circle><circle cx="103.1" cy="69.6" r="1.1" fill="#67e8f9" opacity="0.27"></circle><circle cx="21.1" cy="81.2" r="1.1" fill="#67e8f9" opacity="0.27"></circle><circle cx="73.9" cy="18.7" r="1.1" fill="#67e8f9" opacity="0.26"></circle><circle cx="79.1" cy="99.9" r="1.1" fill="#67e8f9" opacity="0.25"></circle>
@@ -1441,28 +1320,34 @@ img{max-width:100%; display:block;}
               </div>
             </div>
           
-      </div>
-      <div class="card-body">
-        <div class="card-kicker"><span class="tag tag-accent">Featured</span></div>
-        <div class="card-eyebrow">AI operating layer</div>
-        <h3 class="card-title">AuraOS</h3>
-        <div class="card-url">ai-operating-layer-interface.vercel.app</div>
-        <p class="lead">
-          “The future isn't clicked — it's understood.” An operating layer that reads voice,
-          gesture and intent, and turns any computer into an intelligent workspace.
-        </p>
-        <div class="chips">
-          <span class="chip">React</span><span class="chip">Computer Vision</span><span class="chip">Automation</span>
+      </div></div></div><i class="monitor-neck"></i><i class="monitor-foot"></i></div>
+          <div class="phone"><div class="phone-scr ph-aura">
+            <div class="ph-bar"><b>AuraOS</b><i></i></div>
+            <div class="ph-orb"></div>
+            <div class="ph-k">AI OPERATING LAYER</div>
+            <div class="ph-h">The future isn’t clicked.<br><span>It’s understood.</span></div>
+            <div class="ph-btn">Experience Aura →</div>
+          </div></div>
         </div>
-        <span class="card-link">Visit live ↗</span>
-      </div>
-    </a>
+        <div class="tour-meta">
+          <span class="tour-url mono">ai-operating-layer-interface.vercel.app</span>
+          <div class="tour-links">
+            <a href="https://ai-operating-layer-interface.vercel.app/" target="_blank" rel="noopener">Visit live ↗</a>
+            <a href="https://github.com/RayeesaMahmood/kanz-Hackathon" target="_blank" rel="noopener">Code ↗</a>
+            <button type="button" class="tour-details-btn" aria-expanded="false">Details <i>+</i></button>
+          </div>
+          <div class="tour-details" hidden>
+            <p>An operating layer that reads voice, hand gestures and intent, so a computer can be driven without touching it. Custom gesture recognition reached 96% accuracy.</p>
+            <p class="tour-stack mono">React · Python · OpenCV · MediaPipe · Speech recognition</p>
+          </div>
+        </div>
+      </article>
 
-    <!-- 2x2 grid -->
-    <div class="work-grid">
-
-      <a href="https://medicore-psi.vercel.app/" target="_blank" rel="noopener" class="card tilt reveal">
-        <div class="card-media">
+      <!-- 2 · MediCore -->
+      <article class="tour-item" data-accent="#14b8a6" aria-labelledby="t-medi">
+        <h3 class="tour-name" id="t-medi">MediCore AI</h3>
+        <div class="devices">
+          <div class="monitor"><div class="monitor-bezel"><div class="scr scr-light"><div class="scr-inner">
 
               <div style="height:24px; background:#0f1b2d; display:flex; align-items:center; padding:0 10px; gap:8px;">
                 <span style="font-size:8.5px; font-weight:800; color:#fff;">Medi<span style="color:#14b8a6;">Core</span> AI</span>
@@ -1523,22 +1408,36 @@ img{max-width:100%; display:block;}
                 </div>
               </div>
             
+        </div></div></div><i class="monitor-neck"></i><i class="monitor-foot"></i></div>
+          <div class="phone"><div class="phone-scr ph-medi">
+            <div class="ph-bar"><b>Medi<span>Core</span> AI</b><em>● Live</em></div>
+            <div class="ph-title">Overview</div>
+            <div class="ph-alert">51 flagged claims · 94% confidence</div>
+            <div class="ph-kpis"><div><small>Patients</small><b>1,200</b></div><div><small>Approval</small><b>77.5%</b></div></div>
+            <div class="ph-bars"><i style="height:60%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:70%"></i><i style="height:52%"></i></div>
+            <div class="ph-cta">▸ Run AI Agents</div>
+          </div></div>
         </div>
-        <div class="card-body">
-          <div class="card-kicker"><span class="tag tag-gold">Award paper → built</span></div>
-          <div class="card-eyebrow">Hospital intelligence platform</div>
-          <h3 class="card-title card-title-sm">MediCore AI</h3>
-          <div class="card-url">medicore-psi.vercel.app</div>
-          <p class="lead-sm">The build behind my ICSDE paper — a five-stage agent pipeline from symptom analysis to claim decision and fraud detection, across a 1,200-patient dataset.</p>
-          <div class="card-foot">
-            <span class="card-link">Visit live ↗</span>
-            <a class="card-sublink" href="https://doi.org/10.6084/m9.figshare.32041392" target="_blank" rel="noopener" onclick="event.stopPropagation()">Research DOI ↗</a>
+        <div class="tour-meta">
+          <span class="tour-url mono">medicore-psi.vercel.app</span>
+          <div class="tour-links">
+            <a href="https://medicore-psi.vercel.app/" target="_blank" rel="noopener">Visit live ↗</a>
+            <a href="https://github.com/RayeesaMahmood/MediCore" target="_blank" rel="noopener">Code ↗</a>
+            <a href="https://doi.org/10.6084/m9.figshare.32041392" target="_blank" rel="noopener">Paper ↗</a>
+            <button type="button" class="tour-details-btn" aria-expanded="false">Details <i>+</i></button>
+          </div>
+          <div class="tour-details" hidden>
+            <p>The build behind my ICSDE 2026 Best Presenter paper: a five-stage agent pipeline from symptom analysis to claim decision and fraud detection, run across a 1,200-patient dataset.</p>
+            <p class="tour-stack mono">Python · REST APIs · Multi-agent architecture</p>
           </div>
         </div>
-      </a>
+      </article>
 
-      <a href="https://raycare.vercel.app/" target="_blank" rel="noopener" class="card tilt reveal">
-        <div class="card-media">
+      <!-- 3 · RayCare -->
+      <article class="tour-item" data-accent="#5b8cff" aria-labelledby="t-ray">
+        <h3 class="tour-name" id="t-ray">RayCare Queue</h3>
+        <div class="devices">
+          <div class="monitor"><div class="monitor-bezel"><div class="scr scr-light"><div class="scr-inner">
 
               <div style="height:26px; background:linear-gradient(90deg,#3b6fd4,#6b95ef); display:flex; align-items:center; padding:0 10px; gap:7px;">
                 <span style="width:14px; height:14px; border-radius:3px; background:#fff; display:grid; place-items:center; font-size:7px;">🅡</span>
@@ -1581,21 +1480,36 @@ img{max-width:100%; display:block;}
                 <div style="font-size:6.5px; font-weight:700; color:#e11d48; margin-top:10px;">🚨 Emergency</div>
               </div>
             
+        </div></div></div><i class="monitor-neck"></i><i class="monitor-foot"></i></div>
+          <div class="phone"><div class="phone-scr ph-ray">
+            <div class="ph-bar"><b>RayCare Queue</b><i></i></div>
+            <div class="ph-title">Your token</div>
+            <div class="ph-token">A-042</div>
+            <div class="ph-row"><span>People ahead</span><b>3</b></div>
+            <div class="ph-row"><span>Estimated wait</span><b>12 min</b></div>
+            <div class="ph-sos">🚨 Emergency booking</div>
+          </div></div>
         </div>
-        <div class="card-body">
-          <div class="card-eyebrow">Healthcare platform</div>
-          <h3 class="card-title card-title-sm">RayCare Queue</h3>
-          <div class="card-url">raycare.vercel.app</div>
-          <p class="lead-sm">A smarter hospital queue — registration, appointment booking, live position tracking and smart notifications, with an admin dashboard behind it.</p>
-          <div class="card-foot">
-            <span class="card-link">Visit live ↗</span>
-            <a class="card-sublink" href="https://doi.org/10.6084/m9.figshare.30545999" target="_blank" rel="noopener" onclick="event.stopPropagation()">Research DOI ↗</a>
+        <div class="tour-meta">
+          <span class="tour-url mono">raycare.vercel.app</span>
+          <div class="tour-links">
+            <a href="https://raycare.vercel.app/" target="_blank" rel="noopener">Visit live ↗</a>
+            <a href="https://github.com/RayeesaMahmood/RayCare" target="_blank" rel="noopener">Code ↗</a>
+            <a href="https://doi.org/10.6084/m9.figshare.30545999" target="_blank" rel="noopener">Paper ↗</a>
+            <button type="button" class="tour-details-btn" aria-expanded="false">Details <i>+</i></button>
+          </div>
+          <div class="tour-details" hidden>
+            <p>A hospital queue patients can see: registration, booking, live position tracking and notifications, synced across users in under a second, with an admin dashboard for staff.</p>
+            <p class="tour-stack mono">JavaScript · Firebase · HTML &amp; CSS · Vercel</p>
           </div>
         </div>
-      </a>
+      </article>
 
-      <a href="https://rayeesamahmood.github.io/Bizzapt-Enterprises/" target="_blank" rel="noopener" class="card tilt reveal">
-        <div class="card-media card-media-dark">
+      <!-- 4 · Bizzapt -->
+      <article class="tour-item" data-accent="#c8b4c2" aria-labelledby="t-biz">
+        <h3 class="tour-name" id="t-biz">Bizzapt</h3>
+        <div class="devices">
+          <div class="monitor"><div class="monitor-bezel"><div class="scr scr-dark"><div class="scr-inner">
 
               <div style="height:15px; background:#17171a; display:flex; align-items:center; justify-content:space-around; padding:0 6px;">
                 <span class="mono" style="font-size:5px; letter-spacing:.14em; color:#fff;">WEBSITE CREATION</span>
@@ -1632,310 +1546,162 @@ img{max-width:100%; display:block;}
                 </div>
               </div>
             
+        </div></div></div><i class="monitor-neck"></i><i class="monitor-foot"></i></div>
+          <div class="phone"><div class="phone-scr ph-biz">
+            <div class="ph-bar"><b>BIZZAPT</b><i></i></div>
+            <div class="ph-pill">● Partnering with startups</div>
+            <div class="ph-serif">Your <i>digital.</i><br><i>Growth Partner.</i></div>
+            <div class="ph-btn">Start Your Project →</div>
+            <div class="ph-btn o">See What We Do →</div>
+          </div></div>
         </div>
-        <div class="card-body">
-          <div class="card-kicker"><span class="tag tag-accent">Designed &amp; built</span></div>
-          <div class="card-eyebrow">Brand &amp; website</div>
-          <h3 class="card-title card-title-sm">Bizzapt Enterprises</h3>
-          <div class="card-url">rayeesamahmood.github.io/Bizzapt-Enterprises</div>
-          <p class="lead-sm">The company I co-founded. I designed and shipped the site end to end — the serif identity, the dark hero, and every section down to pricing.</p>
-          <span class="card-link">Visit site ↗</span>
-        </div>
-      </a>
-
-      <div class="card tilt reveal">
-        <div class="card-media">
-
-              <div style="position:absolute; inset:0; background-image:radial-gradient(rgba(200,238,63,.16) 1px, transparent 1px); background-size:14px 14px;"></div>
-              <div style="position:absolute; left:18px; top:16px;">
-                <div class="mono" style="font-size:7px; letter-spacing:.14em; color:#9fc44a;">LIVE AQI · HYDERABAD</div>
-                <div style="display:flex; align-items:flex-end; gap:8px; margin-top:3px;">
-                  <span class="display" style="font-size:48px; line-height:.9; color:#c8ee3f;">142</span>
-                  <span class="mono" style="font-size:8.5px; color:#ffb020; padding-bottom:7px;">MODERATE</span>
-                </div>
-              </div>
-              <svg viewBox="0 0 150 46" preserveAspectRatio="none" style="position:absolute; left:18px; right:18px; bottom:56px; width:calc(100% - 36px); height:52px;" fill="none">
-                <polyline points="0,36 16,30 32,33 48,20 64,25 80,12 96,18 112,8 128,14 150,6" stroke="#c8ee3f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></polyline>
-                <polyline points="0,42 16,38 32,40 48,32 64,36 80,28 96,31 112,24 128,28 150,22" stroke="#7fd8f5" stroke-width="1.4" opacity=".7" stroke-linecap="round" vector-effect="non-scaling-stroke"></polyline>
-              </svg>
-              <div style="position:absolute; left:18px; right:18px; bottom:16px; display:flex; gap:7px;">
-                <div style="flex:1; background:rgba(200,238,63,.14); border:1px solid rgba(200,238,63,.4); border-radius:6px; padding:6px 7px;"><div class="mono" style="font-size:6.5px; color:#c8ee3f;">SENSOR</div></div>
-                <div style="flex:1; background:rgba(127,216,245,.14); border:1px solid rgba(127,216,245,.4); border-radius:6px; padding:6px 7px;"><div class="mono" style="font-size:6.5px; color:#7fd8f5;">SATELLITE</div></div>
-                <div style="flex:1; background:rgba(255,176,32,.14); border:1px solid rgba(255,176,32,.4); border-radius:6px; padding:6px 7px;"><div class="mono" style="font-size:6.5px; color:#ffb020;">PUBLIC</div></div>
-              </div>
-            
-        </div>
-        <div class="card-body">
-          <div class="card-eyebrow">AI research</div>
-          <h3 class="card-title card-title-sm">Multi-Agent AQI</h3>
-          <div class="card-url">research · conference paper</div>
-          <p class="lead-sm">Sensor, satellite and public data fused by autonomous agents into personal air-quality guidance.</p>
-          <div class="card-foot">
-            <a class="card-link" href="https://doi.org/10.6084/m9.figshare.30933533" target="_blank" rel="noopener">Read the research ↗</a>
+        <div class="tour-meta">
+          <span class="tour-url mono">rayeesamahmood.github.io/Bizzapt-Enterprises</span>
+          <div class="tour-links">
+            <a href="https://rayeesamahmood.github.io/Bizzapt-Enterprises/" target="_blank" rel="noopener">Visit live ↗</a>
+            <a href="https://github.com/RayeesaMahmood/Bizzapt-Enterprises" target="_blank" rel="noopener">Code ↗</a>
+            <button type="button" class="tour-details-btn" aria-expanded="false">Details <i>+</i></button>
+          </div>
+          <div class="tour-details" hidden>
+            <p>The studio I co-founded. I designed the brand and built the site end to end: wireframes, the serif identity, the dark hero and every section down to pricing.</p>
+            <p class="tour-stack mono">Figma · HTML · CSS · JavaScript</p>
           </div>
         </div>
-      </div>
+      </article>
     </div>
+  </div>
 
-    <a href="https://github.com/rayeesamahmood" target="_blank" rel="noopener" class="github-cta tilt reveal">
-      <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" class="gh-icon"><path d="M12 .5A11.5 11.5 0 004.2 20.1c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 015.8 0C17 4.3 18 4.6 18 4.6c.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0012 .5z"></path></svg>
+  <div class="wrap more-projects">
+    <div class="more-head reveal">
+      <h3 class="tour-title tour-title-sm"><span>More</span><span class="grad-text">projects</span></h3>
+      <p class="lead-sm">Everything else I've built, published or shipped. Open any row for the details.</p>
+    </div>
+    <ol class="more-list" id="moreList">
+      <li class="more-row reveal">
+        <button type="button" class="more-sum" aria-expanded="false"><span class="more-num mono">01</span><span class="more-name">AuraOS</span><span class="more-short">AI operating layer driven by voice, gesture and intent</span><span class="more-tag mono">AI · Vision</span><i aria-hidden="true">+</i></button>
+        <div class="more-body" hidden><p>An operating layer that reads voice, hand gestures and intent. Custom gesture recognition reached 96% accuracy.</p><p class="more-tech mono">React · Python · OpenCV · MediaPipe</p><div class="more-links"><a href="https://ai-operating-layer-interface.vercel.app/" target="_blank" rel="noopener">Live ↗</a><a href="https://github.com/RayeesaMahmood/kanz-Hackathon" target="_blank" rel="noopener">Code ↗</a></div></div>
+      </li>
+      <li class="more-row reveal">
+        <button type="button" class="more-sum" aria-expanded="false"><span class="more-num mono">02</span><span class="more-name">MediCore AI</span><span class="more-short">Five-stage agent pipeline for claims and fraud</span><span class="more-tag mono">Healthcare AI</span><i aria-hidden="true">+</i></button>
+        <div class="more-body" hidden><p>Symptom analysis to claim decision and fraud detection across a 1,200-patient dataset. Best Presenter, ICSDE 2026.</p><p class="more-tech mono">Python · REST APIs · Multi-agent</p><div class="more-links"><a href="https://medicore-psi.vercel.app/" target="_blank" rel="noopener">Live ↗</a><a href="https://github.com/RayeesaMahmood/MediCore" target="_blank" rel="noopener">Code ↗</a><a href="https://doi.org/10.6084/m9.figshare.32041392" target="_blank" rel="noopener">Paper ↗</a></div></div>
+      </li>
+      <li class="more-row reveal">
+        <button type="button" class="more-sum" aria-expanded="false"><span class="more-num mono">03</span><span class="more-name">RayCare Queue</span><span class="more-short">Real-time hospital queue with emergency booking</span><span class="more-tag mono">Healthcare · Web app</span><i aria-hidden="true">+</i></button>
+        <div class="more-body" hidden><p>Registration, booking, live position tracking and notifications with sub-second Firebase sync and an admin dashboard.</p><p class="more-tech mono">JavaScript · Firebase · Vercel</p><div class="more-links"><a href="https://raycare.vercel.app/" target="_blank" rel="noopener">Live ↗</a><a href="https://github.com/RayeesaMahmood/RayCare" target="_blank" rel="noopener">Code ↗</a><a href="https://doi.org/10.6084/m9.figshare.30545999" target="_blank" rel="noopener">Paper ↗</a></div></div>
+      </li>
+      <li class="more-row reveal">
+        <button type="button" class="more-sum" aria-expanded="false"><span class="more-num mono">04</span><span class="more-name">Bizzapt Enterprises</span><span class="more-short">Brand and website for the studio I co-founded</span><span class="more-tag mono">Brand · Website</span><i aria-hidden="true">+</i></button>
+        <div class="more-body" hidden><p>Wireframes, a serif identity, the dark hero and every section down to pricing, shipped in two weeks.</p><p class="more-tech mono">Figma · HTML · CSS · JavaScript</p><div class="more-links"><a href="https://rayeesamahmood.github.io/Bizzapt-Enterprises/" target="_blank" rel="noopener">Live ↗</a><a href="https://github.com/RayeesaMahmood/Bizzapt-Enterprises" target="_blank" rel="noopener">Code ↗</a></div></div>
+      </li>
+      <li class="more-row reveal">
+        <button type="button" class="more-sum" aria-expanded="false"><span class="more-num mono">05</span><span class="more-name">Multi-agent AQI</span><span class="more-short">Agents that turn air data into personal advice</span><span class="more-tag mono">Research</span><i aria-hidden="true">+</i></button>
+        <div class="more-body" hidden><p>Autonomous agents fuse sensor, satellite and public data into personal air-quality guidance. Presented at the International Conference on Emerging Technologies.</p><p class="more-tech mono">Multi-agent systems · Data fusion</p><div class="more-links"><a href="https://doi.org/10.6084/m9.figshare.30933533" target="_blank" rel="noopener">Paper ↗</a></div></div>
+      </li>
+      <li class="more-row reveal">
+        <button type="button" class="more-sum" aria-expanded="false"><span class="more-num mono">06</span><span class="more-name">RERA</span><span class="more-short">Study-material hub for CS students</span><span class="more-tag mono">Education · Web</span><i aria-hidden="true">+</i></button>
+        <div class="more-body" hidden><p>A centralised, mobile-friendly academic resource platform for Computer Science students.</p><p class="more-tech mono">HTML · CSS · JavaScript</p><div class="more-links"><a href="https://rayeesamahmood.github.io/RERA/" target="_blank" rel="noopener">Live ↗</a><a href="https://github.com/RayeesaMahmood/RERA" target="_blank" rel="noopener">Code ↗</a></div></div>
+      </li>
+      <li class="more-row reveal">
+        <button type="button" class="more-sum" aria-expanded="false"><span class="more-num mono">07</span><span class="more-name">RayCare Queue · hackathon</span><span class="more-short">The first version of RayCare, built at a hackathon</span><span class="more-tag mono">Hackathon</span><i aria-hidden="true">+</i></button>
+        <div class="more-body" hidden><p>Digital tokens, live queue status and appointment booking for outpatient departments. The prototype that became RayCare.</p><p class="more-tech mono">HTML · CSS · JavaScript</p><div class="more-links"><a href="https://github.com/RayeesaMahmood/RayCare-Queue" target="_blank" rel="noopener">Code ↗</a></div></div>
+      </li>
+      <li class="more-row reveal">
+        <button type="button" class="more-sum" aria-expanded="false"><span class="more-num mono">08</span><span class="more-name">This portfolio</span><span class="more-short">The site you are on</span><span class="more-tag mono">Web · WebGL</span><i aria-hidden="true">+</i></button>
+        <div class="more-body" hidden><p>Hand-built with WebGL scenes in Three.js, a scroll-driven project tour and no build step.</p><p class="more-tech mono">HTML · CSS · JavaScript · Three.js</p><div class="more-links"><a href="https://github.com/RayeesaMahmood/PORTFOLIO" target="_blank" rel="noopener">Code ↗</a></div></div>
+      </li>
+    </ol>
+    <a href="https://github.com/RayeesaMahmood" target="_blank" rel="noopener" class="github-cta tilt reveal">
+      <svg class="gh-icon" width="44" height="44" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 015.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0023.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>
       <div class="github-cta-text">
-        <div class="h3">There's more on GitHub.</div>
+        <h3 class="h3">There's more on GitHub.</h3>
         <p class="lead-sm">Side projects, experiments, hackathon builds and the code behind everything on this page.</p>
       </div>
-      <span class="btn btn-outline btn-sm">github.com/rayeesamahmood ↗</span>
+      <span class="btn btn-sm btn-outline">github.com/RayeesaMahmood ↗</span>
     </a>
-
   </div>
 </section>
 
-<!-- ══════════════════════════ DESIGN & PROCESS ══════════════════════════ -->
+<!-- ══════════════════════════ WEB DESIGN ══════════════════════════ -->
 <section class="section" id="design">
   <div class="wrap">
     <div class="section-head split reveal">
       <div>
-        <span class="eyebrow">03 · UI/UX &amp; Design</span>
-        <h2 class="h2">Not just built. <em>Designed.</em></h2>
+        <span class="eyebrow">03 · Web design</span>
+        <h2 class="h2">From sketch <em>to shipped.</em></h2>
       </div>
-      <p class="lead-sm">One shipped case study, one slot still open for what's next.</p>
+      <p class="lead-sm">Drag the handle to compare the first wireframe of the Bizzapt site with the page that went live.</p>
     </div>
 
-    <div class="design-grid">
-      <a href="https://rayeesamahmood.github.io/Bizzapt-Enterprises/" target="_blank" rel="noopener" class="card tilt reveal">
-        <div class="wireframe-compare">
-
-              <!-- wireframe half -->
-              <div style="padding:18px 16px; border-right:2px dashed rgba(20,18,15,.35); position:relative;">
-                <div class="mono" style="font-size:7.5px; letter-spacing:.14em; color:#8a8072;">01 · WIREFRAME</div>
-                <div style="margin-top:10px; display:flex; align-items:center; justify-content:space-between;">
-                  <span style="width:30px; height:6px; border-radius:2px; background:#c2b79e;"></span>
-                  <span style="display:flex; gap:4px;"><span style="width:12px; height:4px; background:#c2b79e;"></span><span style="width:12px; height:4px; background:#c2b79e;"></span><span style="width:12px; height:4px; background:#c2b79e;"></span></span>
-                </div>
-                <div style="height:12px; width:90%; background:#d3c9b2; margin-top:12px;"></div>
-                <div style="height:12px; width:62%; background:#d3c9b2; margin-top:5px;"></div>
-                <div style="height:5px; width:76%; background:#ded5c1; margin-top:9px;"></div>
-                <div style="height:5px; width:58%; background:#ded5c1; margin-top:4px;"></div>
-                <div style="width:56px; height:16px; border:1.5px dashed #a89c85; margin-top:11px;"></div>
-                <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:5px; margin-top:12px;">
-                  <div style="height:30px; border:1.5px dashed #a89c85;"></div>
-                  <div style="height:30px; border:1.5px dashed #a89c85;"></div>
-                  <div style="height:30px; border:1.5px dashed #a89c85;"></div>
-                </div>
+    <div class="design-v3">
+      <div class="ba reveal" id="beforeAfter">
+        <div class="ba-frame">
+          <div class="ba-browser"><span class="lyr-dot"></span><span class="lyr-dot"></span><span class="lyr-dot"></span><em>rayeesamahmood.github.io/Bizzapt-Enterprises</em></div>
+          <div class="ba-stage">
+            <!-- shipped -->
+            <div class="ba-layer ba-final">
+              <div class="bz-strip"><span>Website creation</span>✦<span>UI/UX design</span>✦<span>Web development</span>✦<span>Data analysis</span></div>
+              <div class="bz-nav"><b>BIZZAPT</b><span>Services</span><span>About</span><span>Coaching</span><span>Pricing</span><u>Start Project →</u></div>
+              <div class="bz-hero">
+                <span class="bz-pill">● Proudly partnering with startups worldwide</span>
+                <div class="bz-h">Your <i>digital.</i><br><i>Growth Partner.</i></div>
+                <p>We work closely with startups and growing businesses to build their digital presence, drive real results, and grow fast.</p>
+                <div class="bz-ctas"><u>Start Your Project →</u><s>See What We Do →</s></div>
               </div>
-              <!-- final half -->
-              <div style="padding:18px 16px; background:#fffdf7; position:relative;">
-                <div class="mono" style="font-size:7.5px; letter-spacing:.14em; color:#e5484d;">02 · SHIPPED</div>
-                <div style="margin-top:10px; display:flex; align-items:center; justify-content:space-between;">
-                  <span class="display" style="font-size:9px;">BIZZAPT</span>
-                  <span style="display:flex; gap:4px;"><span style="width:12px; height:4px; border-radius:2px; background:#ddd2b9;"></span><span style="width:12px; height:4px; border-radius:2px; background:#ddd2b9;"></span><span style="width:12px; height:4px; border-radius:2px; background:#ddd2b9;"></span></span>
-                </div>
-                <div style="height:12px; width:90%; border-radius:3px; background:#14120f; margin-top:12px;"></div>
-                <div style="height:12px; width:62%; border-radius:3px; background:#14120f; margin-top:5px;"></div>
-                <div style="height:5px; width:76%; border-radius:3px; background:#ded3ba; margin-top:9px;"></div>
-                <div style="height:5px; width:58%; border-radius:3px; background:#ded3ba; margin-top:4px;"></div>
-                <div style="display:inline-block; margin-top:11px; background:#e5484d; border:1.5px solid #14120f; border-radius:4px; padding:4px 10px;">
-                  <span class="mono" style="font-size:6.5px; color:#fff; letter-spacing:.1em;">GET STARTED</span>
-                </div>
-                <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:5px; margin-top:12px;">
-                  <div style="height:30px; border-radius:4px; background:#f5a623; border:1.5px solid #14120f;"></div>
-                  <div style="height:30px; border-radius:4px; background:#4fd1e0; border:1.5px solid #14120f;"></div>
-                  <div style="height:30px; border-radius:4px; background:#b0e050; border:1.5px solid #14120f;"></div>
-                </div>
+            </div>
+            <!-- wireframe -->
+            <div class="ba-layer ba-wire" id="baWire">
+              <div class="wf-strip"><i></i><i></i><i></i><i></i></div>
+              <div class="wf-nav"><b></b><i></i><i></i><i></i><i></i><u></u></div>
+              <div class="wf-hero">
+                <span class="wf-pill"></span>
+                <div class="wf-h"></div><div class="wf-h s"></div>
+                <div class="wf-p"></div><div class="wf-p s"></div>
+                <div class="wf-ctas"><i></i><i></i></div>
               </div>
-              <svg style="position:absolute; left:50%; top:50%; margin:-13px 0 0 -13px; width:26px; height:26px; z-index:3;" viewBox="0 0 26 26">
-                <circle cx="13" cy="13" r="12" fill="#e5484d" stroke="#14120f" stroke-width="1.5"></circle>
-                <path d="M9 13h8M14 10l3 3-3 3" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            
+              <span class="wf-note n1">big serif headline</span>
+              <span class="wf-note n2">2 CTAs, one loud</span>
+              <span class="wf-note n3">trust line</span>
+              <span class="wf-tag">01 · Wireframe</span>
+            </div>
+            <span class="ba-tag-final">02 · Shipped</span>
+            <button class="ba-handle" id="baHandle" type="button" role="slider" aria-label="Compare wireframe and shipped design" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+              <span class="ba-knob"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
+            </button>
+          </div>
         </div>
-        <div class="card-body">
-          <span class="eyebrow eyebrow-sm">Case study 01</span>
-          <h3 class="card-title card-title-sm">Bizzapt — the brand site</h3>
-          <p class="lead-sm">Designed the company site end to end: wireframes, type and colour system, then the live pages — built to explain the business in one scroll.</p>
-          <div class="chips"><span class="chip">Figma</span><span class="chip">Brand</span><span class="chip">Web Design</span></div>
-        </div>
-      </a>
+      </div>
 
-      <div class="card tilt reveal">
-        <div class="card-media case-placeholder">
-          <span>Case study — coming soon</span>
-        </div>
-        <div class="card-body">
-          <span class="eyebrow eyebrow-sm">Case study 02</span>
-          <h3 class="card-title card-title-sm">MediCore</h3>
-          <p class="lead-sm">A deeper look at the MediCore AI interface — the workflow, the decisions, and what changed between wireframe and shipped product.</p>
-          <div class="chips"><span class="chip">Wireframing</span><span class="chip">Prototyping</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="process-grid">
-      <div class="process-card tilt reveal">
-        <div class="process-num">01</div>
-        <div class="process-title">Understand</div>
-        <div class="process-desc">Talk to whoever is stuck with the problem first.</div>
-      </div>
-      <div class="process-card tilt reveal">
-        <div class="process-num">02</div>
-        <div class="process-title">Sketch</div>
-        <div class="process-desc">Paper first, Figma second.</div>
-      </div>
-      <div class="process-card tilt reveal">
-        <div class="process-num">03</div>
-        <div class="process-title">Build</div>
-        <div class="process-desc">Real enough to break, then break it.</div>
-      </div>
-      <div class="process-card tilt reveal">
-        <div class="process-num">04</div>
-        <div class="process-title">Refine</div>
-        <div class="process-desc">Ship, then fix what actually hurts.</div>
-      </div>
+      <ol class="steps reveal">
+        <li><b>Understand</b><span>Talk to whoever is stuck with the problem first.</span></li>
+        <li><b>Wireframe</b><span>Paper first, then grey boxes in Figma.</span></li>
+        <li><b>Design</b><span>Type, colour and components as a small system.</span></li>
+        <li><b>Build</b><span>Responsive HTML, CSS and JavaScript, or React.</span></li>
+        <li><b>Ship &amp; refine</b><span>Deploy on Vercel or Netlify, then fix what actually hurts.</span></li>
+      </ol>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════ TOOLKIT ══════════════════════════ -->
+<!-- ══════════════════════════ STACK ══════════════════════════ -->
 <section class="section section-alt" id="toolkit">
   <div class="section-beam-wrap" aria-hidden="true"><div class="section-beam"></div></div>
   <div class="wrap">
     <div class="section-head split reveal">
       <div>
-        <span class="eyebrow">04 · The Toolkit</span>
-        <h2 class="h2">Everything in the kit.</h2>
+        <span class="eyebrow">04 · The stack</span>
+        <h2 class="h2">The full stack, <em>layer by layer.</em></h2>
       </div>
-      <p class="lead-sm">Tools and skills I reach for, in roughly the order I reach for them.</p>
+      <p class="lead-sm">What I use at each level of a product, from the screen down to the deploy.</p>
     </div>
 
-    <div class="toolkit-network reveal" aria-hidden="true">
-      <svg class="network-svg" viewBox="0 0 900 150" preserveAspectRatio="xMidYMid meet">
-        <defs>
-          <linearGradient id="netLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop class="net-stop-a" offset="0%"></stop>
-            <stop class="net-stop-b" offset="50%"></stop>
-            <stop class="net-stop-c" offset="100%"></stop>
-          </linearGradient>
-        </defs>
-
-        <path id="netPath1" class="net-line" d="M450,75 C 360,75 300,40 150,50"></path>
-        <path id="netPath2" class="net-line" d="M450,75 C 360,75 300,110 150,100"></path>
-        <path id="netPath3" class="net-line" d="M450,75 C 400,50 360,30 320,25"></path>
-        <path id="netPath4" class="net-line" d="M450,75 C 400,100 360,120 320,125"></path>
-        <path id="netPath5" class="net-line" d="M450,75 C 540,75 600,40 750,50"></path>
-        <path id="netPath6" class="net-line" d="M450,75 C 540,75 600,110 750,100"></path>
-
-        <g class="net-node"><circle cx="150" cy="50" r="9"></circle><text x="150" y="26" text-anchor="middle">AI</text></g>
-        <g class="net-node"><circle cx="150" cy="100" r="9"></circle><text x="150" y="124" text-anchor="middle">DATA</text></g>
-        <g class="net-node"><circle cx="320" cy="25" r="7"></circle><text x="320" y="12" text-anchor="middle">WEB</text></g>
-        <g class="net-node"><circle cx="320" cy="125" r="7"></circle><text x="320" y="146" text-anchor="middle">UX</text></g>
-        <g class="net-node"><circle cx="750" cy="50" r="9"></circle><text x="750" y="26" text-anchor="middle">CLOUD</text></g>
-        <g class="net-node"><circle cx="750" cy="100" r="9"></circle><text x="750" y="124" text-anchor="middle">DESIGN</text></g>
-
-        <circle class="net-hub" cx="450" cy="75" r="23"></circle>
-        <path class="net-hub-icon" d="M450,64 L450,86 M439,75 L461,75"></path>
-
-        <circle class="net-pulse net-pulse-a" r="3.4">
-          <animateMotion dur="3.4s" repeatCount="indefinite">
-            <mpath href="#netPath1"></mpath>
-          </animateMotion>
-        </circle>
-        <circle class="net-pulse net-pulse-b" r="3">
-          <animateMotion dur="4.1s" begin="0.8s" repeatCount="indefinite">
-            <mpath href="#netPath5"></mpath>
-          </animateMotion>
-        </circle>
-        <circle class="net-pulse net-pulse-c" r="3">
-          <animateMotion dur="3.8s" begin="1.6s" repeatCount="indefinite">
-            <mpath href="#netPath4"></mpath>
-          </animateMotion>
-        </circle>
-      </svg>
-    </div>
-
-    <div class="toolkit-grid reveal">
-      <div class="tool-tile tilt">
-        <div class="tool-icon" style="--icon-bg:linear-gradient(150deg,#7c5cff,#a98bff);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 3v18M3 12h18"></path></svg>
-        </div>
-        <div class="tool-label">FIGMA</div>
-      </div>
-
-      <div class="tool-tile tilt">
-        <div class="tool-icon" style="--icon-bg:linear-gradient(150deg,#2a6df0,#63a1ff);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 20L18 6M9 20h9v-9"></path></svg>
-        </div>
-        <div class="tool-label">PHOTOSHOP</div>
-      </div>
-
-      <div class="tool-tile tilt">
-        <div class="tool-icon" style="--icon-bg:linear-gradient(150deg,#e8823c,#f5b06a);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 20L15 4l1.5 3L11 20z"></path></svg>
-        </div>
-        <div class="tool-label">ILLUSTRATOR</div>
-      </div>
-
-      <div class="tool-tile tilt">
-        <div class="tool-icon" style="--icon-bg:linear-gradient(150deg,#ff5fa8,#ff9fce);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="4" y="4" width="7" height="7"></rect><rect x="13" y="4" width="7" height="7"></rect><rect x="4" y="13" width="7" height="7"></rect><rect x="13" y="13" width="7" height="7"></rect></svg>
-        </div>
-        <div class="tool-label">ADOBE XD</div>
-      </div>
-
-      <div class="tool-tile tilt">
-        <div class="tool-icon" style="--icon-bg:linear-gradient(150deg,#2e5fa3,#5b8cff);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M8 4L3 12l5 8M16 4l5 8-5 8M14 4l-4 16"></path></svg>
-        </div>
-        <div class="tool-label">VS CODE</div>
-      </div>
-
-      <div class="tool-tile tilt">
-        <div class="tool-icon" style="--icon-bg:linear-gradient(150deg,#0ea5b5,#4fd1e0);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><ellipse cx="12" cy="12" rx="9" ry="3.6"></ellipse><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(60 12 12)"></ellipse><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(120 12 12)"></ellipse></svg>
-        </div>
-        <div class="tool-label">REACT</div>
-      </div>
-
-      <div class="tool-tile tilt">
-        <div class="tool-icon" style="--icon-bg:linear-gradient(150deg,#4a8f4a,#8fce6a);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 4h16v6H4zM4 14h10v6H4z"></path></svg>
-        </div>
-        <div class="tool-label">PYTHON</div>
-      </div>
-
-      <div class="tool-tile tilt">
-        <div class="tool-icon" style="--icon-bg:linear-gradient(150deg,#3a3a46,#6b6b78);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 3l8 4.6v8.8L12 21l-8-4.6V7.6z"></path><path d="M12 3v18M4 7.6l8 4.6 8-4.6"></path></svg>
-        </div>
-        <div class="tool-label">THREE.JS</div>
-      </div>
-
-      <div class="tool-tile tilt">
-        <div class="tool-icon" style="--icon-bg:linear-gradient(150deg,#e2a13b,#f5c877);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 12a8 8 0 0116 0M4 12a8 8 0 008 8M4 12a8 8 0 018-8"></path></svg>
-        </div>
-        <div class="tool-label">FIREBASE</div>
-      </div>
-
-      <div class="tool-tile tilt">
-        <div class="tool-icon" style="--icon-bg:linear-gradient(150deg,#5b8cff,#9a6bff);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="1.5"></rect><path d="M3 9h18M8 4v14"></path></svg>
-        </div>
-        <div class="tool-label">USER RESEARCH</div>
-      </div>
-
-      <div class="tool-tile tilt">
-        <div class="tool-icon" style="--icon-bg:linear-gradient(150deg,#4c6d8c,#7fa3c2);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"></path></svg>
-        </div>
-        <div class="tool-label">WIREFRAMING</div>
-      </div>
-
-      <div class="tool-tile tilt">
-        <div class="tool-icon" style="--icon-bg:linear-gradient(150deg,#ff6fa8,#ff9fce);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><circle cx="9" cy="10" r="1.3" fill="#fff" stroke="none"></circle><circle cx="15" cy="10" r="1.3" fill="#fff" stroke="none"></circle><path d="M9 15c1.8 1.4 4.2 1.4 6 0"></path></svg>
-        </div>
-        <div class="tool-label">UI/UX DESIGN</div>
-      </div>
-
+    <div class="stack-v3 reveal">
+      <ul class="stack-list" id="stackList">
+        <li data-layer="0"><h3><i style="--c:#ff6fa8"></i>Interface</h3><p><span>React</span><span>JavaScript</span><span>HTML &amp; CSS</span><span>Three.js</span><span>Figma</span><span>Adobe XD</span></p></li>
+        <li data-layer="1"><h3><i style="--c:#63a1ff"></i>APIs &amp; logic</h3><p><span>Python</span><span>Flask</span><span>Node.js</span><span>REST APIs</span><span>Java</span></p></li>
+        <li data-layer="2"><h3><i style="--c:#ff7a30"></i>AI</h3><p><span>Claude API</span><span>Multi-agent systems</span><span>Prompt engineering</span><span>OpenCV</span><span>MediaPipe</span></p></li>
+        <li data-layer="3"><h3><i style="--c:#ffb238"></i>Data</h3><p><span>Firebase</span><span>SQL</span><span>NoSQL</span></p></li>
+        <li data-layer="4"><h3><i style="--c:#4fd1e0"></i>Deploy</h3><p><span>Git &amp; GitHub</span><span>CI/CD</span><span>Vercel</span><span>Netlify</span></p></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -1954,10 +1720,21 @@ img{max-width:100%; display:block;}
         <span class="notebook-ring"></span><span class="notebook-ring"></span><span class="notebook-ring"></span>
         <span class="notebook-ring"></span><span class="notebook-ring"></span><span class="notebook-ring"></span>
         <span class="notebook-ring"></span><span class="notebook-ring"></span><span class="notebook-ring"></span>
+        <span class="notebook-ring"></span><span class="notebook-ring"></span>
       </div>
       <div class="notebook-margin" aria-hidden="true"></div>
-
       <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">Current</div>
+          <div class="timeline-content">
+            <div class="timeline-role">Co-Founder</div>
+            <div class="timeline-org">Bizzapt Enterprises · Hyderabad</div>
+            <ul class="timeline-list">
+              <li>Lead design and web development for a studio building digital presence for startups and growing businesses.</li>
+              <li>Designed the brand and built the company website end to end, from wireframes to deployment.</li>
+            </ul>
+          </div>
+        </div>
         <div class="timeline-item">
           <div class="timeline-date">Feb 2023 – Jul 2025</div>
           <div class="timeline-content">
@@ -1970,26 +1747,24 @@ img{max-width:100%; display:block;}
             </ul>
           </div>
         </div>
-
         <div class="timeline-item">
           <div class="timeline-date">6 months</div>
           <div class="timeline-content">
             <div class="timeline-role">Web Dev &amp; Python Intern</div>
             <div class="timeline-org">IntenCode · Hyderabad</div>
             <ul class="timeline-list">
-              <li>Developed client-facing pages with HTML, CSS and JavaScript.</li>
+              <li>Developed client-facing pages with HTML, CSS and JavaScript in a five-person Agile team.</li>
               <li>Built Python automation that reduced manual reporting by ~40%.</li>
             </ul>
           </div>
         </div>
-
         <div class="timeline-item">
           <div class="timeline-date">6 months</div>
           <div class="timeline-content">
             <div class="timeline-role">Full-Stack Intern</div>
             <div class="timeline-org">PANTECH · Lords Institute of Engineering and Technology</div>
             <ul class="timeline-list">
-              <li>Developed and deployed two full-stack applications using Python, Firebase and JavaScript.</li>
+              <li>Developed and deployed two full-stack applications using Python, Firebase and JavaScript, with CI/CD on Vercel.</li>
             </ul>
           </div>
         </div>
@@ -1998,49 +1773,47 @@ img{max-width:100%; display:block;}
   </div>
 </section>
 
-<!-- ══════════════════════════ COMMUNITY ══════════════════════════ -->
-<section class="section section-alt" id="community">
+<!-- ══════════════════════════ RESEARCH ══════════════════════════ -->
+<section class="section section-alt" id="research">
   <div class="wrap">
     <div class="section-head split reveal">
       <div>
-        <span class="eyebrow">06 · Built in Public</span>
-        <h2 class="h2">Leadership &amp; community.</h2>
+        <span class="eyebrow">06 · Research</span>
+        <h2 class="h2">Healthcare AI, <em>on the record.</em></h2>
       </div>
-      <p class="lead-sm">Rooms I helped run.</p>
+      <p class="lead-sm">Three published papers. Two of them became live products you can open above.</p>
     </div>
 
-    <div class="community-grid">
-      <div class="community-card tilt reveal">
-        <div class="community-icon" style="--icon-bg:linear-gradient(140deg,#e5484d,#ff8a75);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 3c2.8 2.1 4.3 5.9 3.4 11.3L12 17l-3.4-2.7C7.7 8.9 9.2 5.1 12 3z"></path><circle cx="12" cy="9.4" r="1.4" fill="#fff" stroke="none"></circle><path d="M9 15.5L6.5 20l3-1M15 15.5l2.5 4.5-3-1"></path></svg>
-        </div>
-        <div class="community-role">Co-Founder</div>
-        <div class="community-org">Bizzapt Enterprises</div>
-      </div>
+    <div class="papers">
+      <a class="paper tilt reveal" href="https://doi.org/10.6084/m9.figshare.32041392" target="_blank" rel="noopener">
+        <span class="paper-award">★ Best Presenter · ICSDE 2026</span>
+        <span class="paper-venue mono">2026 · ICSDE</span>
+        <h3>AI-Agent Framework for Clinical and Health Insurance Workflow Optimization</h3>
+        <p>Modular agents for claims validation, appointment scheduling and patient-record sync. Built as MediCore AI.</p>
+        <span class="paper-doi mono">DOI 10.6084/m9.figshare.32041392 ↗</span>
+      </a>
+      <a class="paper tilt reveal" href="https://doi.org/10.6084/m9.figshare.30545999" target="_blank" rel="noopener">
+        <span class="paper-venue mono">ORCHIDS International Conference</span>
+        <h3>RayCare: Hospital Queue Management System</h3>
+        <p>Real-time queues with emergency booking and live patient tracking, synced in under a second. Built as RayCare.</p>
+        <span class="paper-doi mono">DOI 10.6084/m9.figshare.30545999 ↗</span>
+      </a>
+      <a class="paper tilt reveal" href="https://doi.org/10.6084/m9.figshare.30933533" target="_blank" rel="noopener">
+        <span class="paper-venue mono">Int’l Conference on Emerging Technologies</span>
+        <h3>Multi-Agent Framework for Real-Time AQI Monitoring</h3>
+        <p>Agents fuse sensor, satellite and public data into personal air-quality guidance.</p>
+        <span class="paper-doi mono">DOI 10.6084/m9.figshare.30933533 ↗</span>
+      </a>
+    </div>
 
-      <div class="community-card tilt reveal">
-        <div class="community-icon" style="--icon-bg:linear-gradient(140deg,#f5a623,#ffcf6b);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#14120f" stroke-width="2"><path d="M8 21h8M12 17v4M6 4h12l-1 8a5 5 0 01-10 0z"></path><path d="M6 6H3v2a3 3 0 003 3M18 6h3v2a3 3 0 01-3 3"></path></svg>
-        </div>
-        <div class="community-role">Judge · Mentor</div>
-        <div class="community-org">App Fusion</div>
-      </div>
-
-      <div class="community-card tilt reveal">
-        <div class="community-icon" style="--icon-bg:linear-gradient(140deg,#ff6fa8,#ffa8cd);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#14120f" stroke-width="2"><path d="M4 8l3.2 2.4L12 5l4.8 5.4L20 8l-1.6 9H5.6z"></path></svg>
-        </div>
-        <div class="community-role">Vice President · 2024</div>
-        <div class="community-org">Lords E-Cell</div>
-      </div>
-
-      <div class="community-card tilt reveal">
-        <div class="community-icon" style="--icon-bg:linear-gradient(140deg,#4fd1e0,#9be8f0);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#14120f" stroke-width="2"><rect x="3" y="7" width="18" height="12" rx="2"></rect><path d="M3 11h18M8 7V5h8v2"></path></svg>
-        </div>
-        <div class="community-role">Treasurer</div>
-        <div class="community-org">IEEE Lords</div>
-      </div>
+    <div class="lead-roles reveal">
+      <h3 class="h3">Leadership &amp; community</h3>
+      <ul>
+        <li><span class="community-icon" style="--icon-bg:linear-gradient(140deg,#e5484d,#ff8a75);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 3c2.8 2.1 4.3 5.9 3.4 11.3L12 17l-3.4-2.7C7.7 8.9 9.2 5.1 12 3z"></path><circle cx="12" cy="9.4" r="1.4" fill="#fff" stroke="none"></circle><path d="M9 15.5L6.5 20l3-1M15 15.5l2.5 4.5-3-1"></path></svg></span><div><b>Co-Founder</b><span>Bizzapt Enterprises</span></div></li>
+        <li><span class="community-icon" style="--icon-bg:linear-gradient(140deg,#f5a623,#ffcf6b);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#14120f" stroke-width="2"><path d="M8 21h8M12 17v4M6 4h12l-1 8a5 5 0 01-10 0z"></path><path d="M6 6H3v2a3 3 0 003 3M18 6h3v2a3 3 0 01-3 3"></path></svg></span><div><b>Judge &amp; mentor</b><span>App Fusion</span></div></li>
+        <li><span class="community-icon" style="--icon-bg:linear-gradient(140deg,#ff6fa8,#ffa8cd);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#14120f" stroke-width="2"><path d="M4 8l3.2 2.4L12 5l4.8 5.4L20 8l-1.6 9H5.6z"></path></svg></span><div><b>Vice President</b><span>Lords E-Cell · 2024</span></div></li>
+        <li><span class="community-icon" style="--icon-bg:linear-gradient(140deg,#4fd1e0,#9be8f0);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#14120f" stroke-width="2"><rect x="3" y="7" width="18" height="12" rx="2"></rect><path d="M3 11h18M8 7V5h8v2"></path></svg></span><div><b>Treasurer</b><span>IEEE Lords · 2023 – 25</span></div></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -2055,77 +1828,95 @@ img{max-width:100%; display:block;}
       </div>
       <p class="lead-sm">The paper trail.</p>
     </div>
-
-    <div class="certs-grid">
-      <div class="certificate tilt reveal">
-
-              <div style="position:absolute; top:-34px; left:-34px; width:68px; height:68px; background:linear-gradient(135deg, var(--navy) 50%, transparent 51%);"></div>
-              <div style="position:absolute; top:-34px; right:-34px; width:68px; height:68px; background:linear-gradient(225deg, var(--gold) 50%, transparent 51%);"></div>
-              <div style="position:absolute; bottom:-34px; left:-34px; width:68px; height:68px; background:linear-gradient(45deg, var(--gold) 50%, transparent 51%);"></div>
-              <div style="position:absolute; bottom:-34px; right:-34px; width:68px; height:68px; background:linear-gradient(315deg, var(--navy) 50%, transparent 51%);"></div>
-
-              <div class="mono" style="font-size:9.5px; letter-spacing:.24em; color:var(--gold);">CERTIFICATE OF</div>
-              <div class="serif" style="font-size:40px; line-height:1.08; margin:6px 0 12px; color:var(--navy);">Best Presenter</div>
-              <div style="width:70px; height:1.5px; background:var(--gold); margin:0 auto 14px;"></div>
-              <div style="font-size:13px; font-weight:800;">ICSDE 2026</div>
-              <div class="lead" style="font-size:12.5px; margin-top:8px; max-width:320px; margin-left:auto; margin-right:auto;">
-                Lords Institute of Engineering &amp; Technology · Aug 2026<br>
-                for “AI-Agent–Integrated Framework for Optimizing Administrative Workflows”
-              </div>
-              <div style="width:58px; height:58px; margin:18px auto 0; border-radius:50%; display:grid; place-items:center; background:radial-gradient(circle at 32% 28%, #ffe08a, var(--gold) 55%, #8a6414 100%); box-shadow:0 3px 7px rgba(0,0,0,.32);">
-                <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#3a2405" stroke-width="1.8"><path d="M12 3l2.2 4.5 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L4.8 8.2l5-.7z"></path></svg>
-              </div>
-            
-      </div>
-
-      <div class="certs-list reveal">
-        <div class="cert-row">
-          <div class="cert-medal"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#3a2405" stroke-width="2"><path d="M12 3l2.2 4.5 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L4.8 8.2l5-.7z"></path></svg></div>
-          <div class="cert-info">
-            <div class="cert-title">Guinness World Record — AI Training Hackathon</div>
-            <div class="cert-sub">KANZ-GWR-C7E2828A47</div>
-          </div>
-          <span class="cert-date">Jul 2026</span>
+    <h3 class="certs-sub mono">Awards</h3>
+    <div class="awards reveal">
+      <article class="award">
+        <div class="cert-medal award-medal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a2405" stroke-width="2" aria-hidden="true"><path d="M12 3l2.2 4.5 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L4.8 8.2l5-.7z"></path></svg></div>
+        <div class="award-body">
+          <span class="award-date mono">Aug 2026</span>
+          <h4>Best Presenter · ICSDE 2026</h4>
+          <p>Lords Institute of Engineering &amp; Technology, for “AI-Agent–Integrated Framework for Optimizing Administrative Workflows”.</p>
         </div>
-        <div class="cert-row">
-          <div class="cert-medal"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#3a2405" stroke-width="2"><path d="M12 3l2.2 4.5 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L4.8 8.2l5-.7z"></path></svg></div>
-          <div class="cert-info"><div class="cert-title">Deloitte Australia — Technology Job Simulation</div></div>
-          <span class="cert-date">Jul 2025</span>
+      </article>
+      <article class="award">
+        <div class="cert-medal award-medal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a2405" stroke-width="2" aria-hidden="true"><path d="M12 3l2.2 4.5 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L4.8 8.2l5-.7z"></path></svg></div>
+        <div class="award-body">
+          <span class="award-date mono">Jul 2026</span>
+          <h4>Guinness World Record</h4>
+          <p>AI Training Hackathon. Certificate KANZ-GWR-C7E2828A47.</p>
         </div>
-        <div class="cert-row">
-          <div class="cert-medal"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#3a2405" stroke-width="2"><path d="M12 3l2.2 4.5 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L4.8 8.2l5-.7z"></path></svg></div>
-          <div class="cert-info"><div class="cert-title">AWS APAC — Solutions Architecture Simulation</div></div>
-          <span class="cert-date">Jun 2025</span>
-        </div>
-        <div class="cert-row">
-          <div class="cert-medal"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#3a2405" stroke-width="2"><path d="M12 3l2.2 4.5 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L4.8 8.2l5-.7z"></path></svg></div>
-          <div class="cert-info"><div class="cert-title">Tata Group — Cybersecurity Analyst Simulation</div></div>
-          <span class="cert-date">Jan 2025</span>
-        </div>
-
-        <a href="https://www.linkedin.com/in/rayeesa-mahmood/" target="_blank" rel="noopener" class="btn btn-outline btn-sm cert-more">+ More on LinkedIn ↗</a>
-      </div>
+      </article>
     </div>
+
+    <h3 class="certs-sub mono">Certifications</h3>
+    <ul class="cert-table reveal">
+      <li><span class="ct-org">Deloitte Australia</span><span class="ct-name">Technology Job Simulation</span><span class="ct-end mono">Jul 2025</span></li>
+      <li><span class="ct-org">AWS APAC</span><span class="ct-name">Solutions Architecture Simulation</span><span class="ct-end mono">Jun 2025</span></li>
+      <li><span class="ct-org">Tata Group</span><span class="ct-name">Cybersecurity Analyst Simulation</span><span class="ct-end mono">Jan 2025</span></li>
+      <li><span class="ct-org">Anthropic</span><span class="ct-name">Claude course: LLM APIs and app development</span><a class="ct-end mono" href="https://verify.skilljar.com/c/ini7iatx2u29" target="_blank" rel="noopener">Verify ↗</a></li>
+      <li><span class="ct-org">IBM SkillsBuild</span><span class="ct-name">ICT</span><a class="ct-end mono" href="https://skills.yourlearning.ibm.com/certificate/PLAN-7A1C23D574F6" target="_blank" rel="noopener">Verify ↗</a></li>
+    </ul>
+    <a href="https://www.linkedin.com/in/rayeesa-mahmood/" target="_blank" rel="noopener" class="btn btn-outline btn-sm cert-more">More on LinkedIn ↗</a>
   </div>
 </section>
 
-<!-- ══════════════════════════ RESUME ══════════════════════════ -->
+<!-- ══════════════════════════ RÉSUMÉ & CV ══════════════════════════ -->
 <section class="section section-alt" id="resume">
   <div class="wrap">
-    <div class="resume-card reveal">
-      <div class="resume-icon">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="url(#resGrad)" stroke-width="1.8">
-          <defs><linearGradient id="resGrad" x1="0" y1="0" x2="1" y2="1"><stop class="grad-stop-a" offset="0%"></stop><stop class="grad-stop-c" offset="100%"></stop></linearGradient></defs>
-          <path d="M7 3h7l5 5v13a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1z"></path>
-          <path d="M14 3v5h5"></path>
-          <path d="M9 13h6M9 16.5h6M9 9.5h2.5"></path>
-        </svg>
+    <div class="section-head split reveal">
+      <div>
+        <span class="eyebrow">08 · Résumé &amp; CV</span>
+        <h2 class="h2">The whole story, <em>on paper.</em></h2>
       </div>
-      <h2 class="h2" style="margin:0 0 8px;">Résumé</h2>
-      <p class="lead-sm" style="max-width:460px; margin:0 auto 26px;">
-        One PDF, two pages — roles, education, research and the toolkit, all in one place.
-      </p>
-      <a href="resume.pdf" target="_blank" rel="noopener" class="btn btn-primary">View Résumé (PDF) ↗</a>
+      <p class="lead-sm">One page for a quick read, or the full record with every paper, role and certificate.</p>
+    </div>
+    <div class="docs-grid">
+      <article class="doc-card reveal">
+        <div class="doc-scene" aria-hidden="true">
+          <div class="doc-paper">
+            <div class="doc-name">Rayeesa Mahmood</div>
+            <div class="doc-role">Full-Stack Developer &amp; UI/UX Designer</div>
+            <div class="doc-rule"></div>
+            <div class="doc-h">Experience</div><i></i><i class="m"></i><i class="s"></i><i></i>
+            <div class="doc-h">Projects</div><i class="m"></i><i></i><i class="s"></i>
+            <div class="doc-h">Skills</div><i></i><i class="s"></i>
+          </div>
+          <div class="doc-paper doc-paper-back"></div>
+        </div>
+        <div class="doc-body">
+          <span class="doc-kicker mono">1 page · PDF &amp; web</span>
+          <h3 class="card-title card-title-sm">Résumé</h3>
+          <p class="lead-sm">Experience, projects with live and GitHub links, skills and education.</p>
+          <div class="doc-actions">
+            <a class="btn btn-primary btn-sm magnetic" href="resume.html">Read online</a>
+            <a class="btn btn-outline btn-sm" href="resume.pdf" download="Rayeesa_Mahmood_Resume.pdf">Download PDF ↓</a>
+          </div>
+        </div>
+      </article>
+      <article class="doc-card reveal">
+        <div class="doc-scene" aria-hidden="true">
+          <div class="doc-paper doc-paper-cv">
+            <div class="doc-kick">Curriculum vitae</div>
+            <div class="doc-name">Rayeesa Mahmood</div>
+            <div class="doc-rule"></div>
+            <div class="doc-h">Research</div><i></i><i class="m"></i><i class="s"></i>
+            <div class="doc-h">Projects</div><i class="m"></i><i></i>
+            <div class="doc-h">Leadership</div><i></i><i class="s"></i>
+            <div class="doc-h">Awards</div><i class="m"></i>
+          </div>
+          <div class="doc-paper doc-paper-back"></div>
+          <div class="doc-paper doc-paper-back2"></div>
+        </div>
+        <div class="doc-body">
+          <span class="doc-kicker mono">3 pages · PDF &amp; web</span>
+          <h3 class="card-title card-title-sm">Curriculum vitae</h3>
+          <p class="lead-sm">The full record: research, every project, leadership, awards and certifications.</p>
+          <div class="doc-actions">
+            <a class="btn btn-primary btn-sm magnetic" href="cv.html">Read online</a>
+            <a class="btn btn-outline btn-sm" href="cv.pdf" download="Rayeesa_Mahmood_CV.pdf">Download PDF ↓</a>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -2133,257 +1924,56 @@ img{max-width:100%; display:block;}
 <!-- ══════════════════════════ CONTACT ══════════════════════════ -->
 <section class="section contact-section" id="contact">
   <div class="wrap">
-    <div class="contact-card reveal">
+    <div class="contact-v3 reveal">
       <div class="section-beam-wrap" aria-hidden="true"><div class="section-beam"></div></div>
-      <div class="contact-globe" aria-hidden="true"></div>
-
-      <div class="contact-content">
+      <div class="cv3-grid-bg" aria-hidden="true"></div>
+      <div class="cv3-left">
         <span class="eyebrow eyebrow-light">Let's talk</span>
-        <h2 class="h2 grad-text">Let's build something worth shipping.</h2>
-        <div class="contact-cta">
-          <a href="mailto:rayeesamahmood8098@gmail.com" class="btn btn-primary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
-            rayeesamahmood8098@gmail.com
-          </a>
+        <h2 class="h2 grad-text">Got a website, web app or AI idea?</h2>
+        <p class="cv3-lead">Tell me what you're building. Pick what fits and the email starts itself.</p>
+        <div class="cv3-chips" role="group" aria-label="What are you after?">
+          <button type="button" class="cv3-chip" aria-pressed="true" data-topic="a website">Website</button>
+          <button type="button" class="cv3-chip" aria-pressed="false" data-topic="a web app">Web app</button>
+          <button type="button" class="cv3-chip" aria-pressed="false" data-topic="an AI integration">AI integration</button>
+          <button type="button" class="cv3-chip" aria-pressed="false" data-topic="a research collaboration">Research</button>
+          <button type="button" class="cv3-chip" aria-pressed="false" data-topic="a job opportunity">Hiring</button>
         </div>
-        <div class="contact-links">
-          <a href="https://www.linkedin.com/in/rayeesa-mahmood/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/rayeesamahmood" target="_blank" rel="noopener">GitHub</a>
-          <a href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
+        <a id="cv3Mail" class="btn btn-primary magnetic cv3-send" href="mailto:rayeesamahmood8098@gmail.com?subject=Let%E2%80%99s%20talk%20about%20a%20website">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
+          <span id="cv3MailText">Email me about a website</span>
+        </a>
+      </div>
+      <div class="cv3-right">
+        <div class="cv3-card">
+          <div class="cv3-row"><span class="cv3-k mono">Email</span><span class="cv3-v">rayeesamahmood8098<wbr>@gmail.com</span><button type="button" class="cv3-copy" id="cv3Copy" aria-label="Copy email address">Copy</button></div>
+          <a class="cv3-row" href="https://www.linkedin.com/in/rayeesa-mahmood/" target="_blank" rel="noopener"><span class="cv3-k mono">LinkedIn</span><span class="cv3-v">in/rayeesa-mahmood</span><span class="cv3-go">↗</span></a>
+          <a class="cv3-row" href="https://github.com/RayeesaMahmood" target="_blank" rel="noopener"><span class="cv3-k mono">GitHub</span><span class="cv3-v">RayeesaMahmood</span><span class="cv3-go">↗</span></a>
+          <a class="cv3-row" href="resume.html"><span class="cv3-k mono">Résumé</span><span class="cv3-v">One page, online or PDF</span><span class="cv3-go">↗</span></a>
+          <div class="cv3-row"><span class="cv3-k mono">Local time</span><span class="cv3-v"><i class="cv3-live"></i><span id="idClock">Hyderabad</span></span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="wrap footer-row">
-    <span>© 2026 Rayeesa Mahmood</span>
-    <a href="#top">Back to top ↑</a>
+</main>
+
+<footer class="footer foot-v3">
+  <div class="wrap foot-row">
+    <a href="#hero" class="brand" aria-label="Rayeesa Mahmood, back to top">Rayeesa<span class="brand-dot">.</span></a>
+    <nav class="foot-links" aria-label="Elsewhere">
+      <a href="https://www.linkedin.com/in/rayeesa-mahmood/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/RayeesaMahmood" target="_blank" rel="noopener">GitHub</a>
+      <a href="resume.html">Résumé</a>
+      <a href="cv.html">CV</a>
+      <a href="mailto:rayeesamahmood8098@gmail.com">Email</a>
+    </nav>
+    <span class="foot-copy mono">© 2026 Rayeesa Mahmood · Hyderabad</span>
+    <a href="#hero" class="foot-top mono">Top ↑</a>
   </div>
 </footer>
 
-<script>
-(function(){
-  "use strict";
-
-  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var canHover = window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-
-  /* ---------------- nav: scroll shadow + mobile toggle ---------------- */
-  var nav = document.querySelector('.nav');
-  var navToggle = document.getElementById('navToggle');
-  var navLinks = document.getElementById('navLinks');
-
-  if (navToggle && nav) {
-    navToggle.addEventListener('click', function(){
-      var open = nav.classList.toggle('nav-open');
-      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    if (navLinks) {
-      navLinks.querySelectorAll('a').forEach(function(a){
-        a.addEventListener('click', function(){ nav.classList.remove('nav-open'); });
-      });
-    }
-  }
-
-  /* ---------------- theme toggle (dark / light) ---------------- */
-  var themeToggle = document.getElementById('themeToggle');
-  var root = document.documentElement;
-
-  function currentTheme(){
-    var attr = root.getAttribute('data-theme');
-    if (attr === 'light' || attr === 'dark') return attr;
-    return 'dark'; // default look when no explicit choice has been made
-  }
-
-  function setTheme(t){
-    root.setAttribute('data-theme', t);
-    try{ localStorage.setItem('theme', t); }catch(e){}
-    window.dispatchEvent(new CustomEvent('themechange', { detail: { theme: t } }));
-  }
-
-  if (themeToggle) {
-    themeToggle.addEventListener('click', function(){
-      setTheme(currentTheme() === 'dark' ? 'light' : 'dark');
-    });
-  }
-
-  /* ---------------- reveal on scroll ---------------- */
-  var revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !reduceMotion) {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0, rootMargin: '0px 0px 40px 0px' });
-    revealEls.forEach(function(el){ io.observe(el); });
-
-    // Belt-and-suspenders fallback: IntersectionObserver can occasionally miss
-    // elements during very fast/synthetic scrolling, so also sweep manually on
-    // scroll, and force-reveal anything still hidden shortly after load — no
-    // element should ever be permanently stuck invisible.
-    function sweepReveal(){
-      var vh = window.innerHeight || document.documentElement.clientHeight;
-      document.querySelectorAll('.reveal:not(.in-view)').forEach(function(el){
-        var r = el.getBoundingClientRect();
-        if (r.top < vh + 40 && r.bottom > -40) el.classList.add('in-view');
-      });
-    }
-    var sweepTicking = false;
-    window.addEventListener('scroll', function(){
-      if (sweepTicking) return;
-      sweepTicking = true;
-      requestAnimationFrame(function(){ sweepReveal(); sweepTicking = false; });
-    }, { passive: true });
-    sweepReveal();
-    setTimeout(function(){
-      document.querySelectorAll('.reveal:not(.in-view)').forEach(function(el){ el.classList.add('in-view'); });
-    }, 2500);
-  } else {
-    revealEls.forEach(function(el){ el.classList.add('in-view'); });
-  }
-
-  /* ---------------- 3D tilt on cards ---------------- */
-  if (canHover && !reduceMotion) {
-    document.querySelectorAll('.tilt').forEach(function(el){
-      var rect = null;
-      el.addEventListener('mouseenter', function(){ rect = el.getBoundingClientRect(); });
-      el.addEventListener('mousemove', function(e){
-        if (!rect) rect = el.getBoundingClientRect();
-        var x = (e.clientX - rect.left) / rect.width - 0.5;
-        var y = (e.clientY - rect.top) / rect.height - 0.5;
-        var rx = (-y * 6).toFixed(2);
-        var ry = (x * 8).toFixed(2);
-        el.style.transform = 'perspective(1000px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) translateZ(4px)';
-      });
-      el.addEventListener('mouseleave', function(){
-        el.style.transform = '';
-        rect = null;
-      });
-    });
-  }
-
-  /* ---------------- hero starfield canvas ---------------- */
-  var canvas = document.getElementById('heroStarfield');
-  if (canvas) {
-    var ctx = canvas.getContext('2d');
-    var hero = document.getElementById('hero');
-    var W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var stars = [];
-    var running = true;
-
-    function seededStars(w, h){
-      var list = [];
-      var count = Math.round((w * h) / 2600);
-      for (var i = 0; i < count; i++) {
-        list.push({
-          x: Math.random() * w,
-          y: Math.random() * h,
-          r: Math.random() * 1.15 + 0.15,
-          baseAlpha: Math.random() * 0.55 + 0.15,
-          twinkle: Math.random() * Math.PI * 2,
-          speed: Math.random() * 0.015 + 0.004
-        });
-      }
-      return list;
-    }
-
-    function resize(){
-      var rect = hero.getBoundingClientRect();
-      W = rect.width; H = rect.height;
-      canvas.width = Math.round(W * dpr);
-      canvas.height = Math.round(H * dpr);
-      canvas.style.width = W + 'px';
-      canvas.style.height = H + 'px';
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      stars = seededStars(W, H);
-    }
-    resize();
-    window.addEventListener('resize', resize);
-
-    function draw(t){
-      ctx.clearRect(0, 0, W, H);
-      for (var i = 0; i < stars.length; i++) {
-        var s = stars[i];
-        var a = reduceMotion ? s.baseAlpha : s.baseAlpha + Math.sin(s.twinkle + t * s.speed) * 0.18;
-        ctx.beginPath();
-        ctx.fillStyle = 'rgba(255,255,255,' + Math.max(0, Math.min(1, a)) + ')';
-        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    }
-
-    function animate(now){
-      draw(now);
-      if (running) requestAnimationFrame(animate);
-    }
-
-    if (reduceMotion) {
-      draw(0);
-    } else {
-      // pause the loop when hero is off-screen for performance
-      if ('IntersectionObserver' in window) {
-        var heroIO = new IntersectionObserver(function(entries){
-          running = entries[0].isIntersecting;
-          if (running) requestAnimationFrame(animate);
-        }, { threshold: 0 });
-        heroIO.observe(hero);
-      }
-      requestAnimationFrame(animate);
-    }
-  }
-
-  /* ---------------- section crossfade / parallax on scroll ---------------- */
-  if (!reduceMotion) {
-    var fadeSections = Array.prototype.slice.call(document.querySelectorAll('.section'));
-    if (fadeSections.length) {
-      var fadeTicking = false;
-      var updateSectionFade = function(){
-        var vh = window.innerHeight || document.documentElement.clientHeight;
-        for (var i = 0; i < fadeSections.length; i++) {
-          var sec = fadeSections[i];
-          var r = sec.getBoundingClientRect();
-          var center = r.top + r.height / 2;
-          var dist = Math.abs(center - vh / 2);
-          var maxDist = (r.height / 2) + (vh / 2);
-          var norm = maxDist > 0 ? Math.min(1, dist / maxDist) : 0;
-          sec.style.setProperty('--scroll-fade', (1 - norm * 0.4).toFixed(3));
-          sec.style.setProperty('--scroll-scale', (1 - norm * 0.035).toFixed(3));
-        }
-        fadeTicking = false;
-      };
-      window.addEventListener('scroll', function(){
-        if (fadeTicking) return;
-        fadeTicking = true;
-        requestAnimationFrame(updateSectionFade);
-      }, { passive: true });
-      window.addEventListener('resize', updateSectionFade);
-      updateSectionFade();
-    }
-  }
-
-  /* ---------------- one-shot light-beam sweep on key sections ---------------- */
-  if (!reduceMotion && 'IntersectionObserver' in window) {
-    var beamEls = document.querySelectorAll('.section-beam-wrap');
-    if (beamEls.length) {
-      var beamIO = new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){
-          if (entry.isIntersecting) {
-            entry.target.classList.add('beam-in');
-            beamIO.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.25 });
-      beamEls.forEach(function(el){ beamIO.observe(el); });
-    }
-  }
-
-})();
-
-</script>
+<script src="js/three.min.js" defer></script>
+<script src="js/fx.js?v=3" defer></script>
 </body>
 </html>

@@ -1,58 +1,39 @@
-Rayeesa Mahmood | Portfolio
+# Rayeesa Mahmood — Portfolio
 
-Welcome to the repository for my personal portfolio website.
+Personal portfolio of Rayeesa Mahmood, full-stack developer and UI/UX designer in Hyderabad, India.
 
-**Live portfolio:** [https://rayeesamahmood.github.io/portfolio-graphics/](https://rayeesamahmood.github.io/portfolio-graphics/)
+**Live:** https://rayeesamahmood.github.io/PORTFOLIO/
 
-## About me
+## What's here
 
-I am a Computer Science Engineer and full-stack developer based in Hyderabad, India. I enjoy building practical web products and AI-integrated systems, especially multi-agent workflows, REST APIs, and real-time applications.
+| File | What it is |
+| --- | --- |
+| `index.html` | The portfolio page |
+| `css/v2.css` | 3D, motion and layout layer on top of the original design |
+| `js/fx.js` | Interactions and WebGL scenes (hero galaxy + AI core, toolkit sphere, contact globe) |
+| `js/three.min.js` | Three.js r160, self-hosted |
+| `resume.html` / `resume.pdf` | One-page résumé, readable online or as a PDF |
+| `cv.html` / `cv.pdf` | Full curriculum vitae |
+| `fonts/` | Self-hosted fonts (SIL Open Font License) |
 
-My journey in technology has also been shaped by community building. I have led Python and AI training for 100+ students, co-organized HackPrix hackathons, mentored student developers, and contributed to open-source learning communities.
+No build step. Plain HTML, CSS and JavaScript served straight from GitHub Pages. Motion respects the "reduce motion" system setting, and the 3D scenes pause when they scroll off screen.
 
-## What this portfolio highlights
+**Adding a photo:** put it at `images/profile.jpg` and uncomment the `<img>` line in the About section of `index.html`. Until then the About card shows an animated monogram.
 
-- Full-stack web development projects
-- AI and multi-agent system work
-- Research publications and technical writing
-- Community leadership, mentoring, and hackathon experience
-- Skills across Python, JavaScript, Java, SQL, Firebase, Flask, Node.js, Git, and GitHub
+## Featured work
 
-## Featured projects
+- **AuraOS** — AI operating layer controlled by voice, gesture and intent. [Live](https://ai-operating-layer-interface.vercel.app/) · [Code](https://github.com/RayeesaMahmood/kanz-Hackathon)
+- **MediCore AI** — multi-agent pipeline for clinical and insurance workflows. [Live](https://medicore-psi.vercel.app/) · [Paper](https://doi.org/10.6084/m9.figshare.32041392)
+- **RayCare Queue** — real-time hospital queue management. [Live](https://raycare.vercel.app/) · [Paper](https://doi.org/10.6084/m9.figshare.30545999)
+- **Bizzapt Enterprises** — brand and website for the studio I co-founded. [Live](https://rayeesamahmood.github.io/Bizzapt-Enterprises/)
+- **Multi-agent AQI** — air-quality monitoring research. [Paper](https://doi.org/10.6084/m9.figshare.30933533)
 
-### AI-Agent Framework for Clinical & Health Insurance Workflows
+## Updating the résumé and CV PDFs
 
-A multi-agent AI system for streamlining administrative workflows such as claims validation, appointment scheduling, and patient-record synchronization.
+Edit `resume.html` or `cv.html`, open it in Chrome, and use Print → Save as PDF (A4, margins "Default", background graphics on). Save over `resume.pdf` or `cv.pdf`.
 
-- [Live project](https://medicore-psi.vercel.app)
-- [Research DOI](https://doi.org/10.6084/m9.figshare.32041392)
+## Contact
 
-### RayCare - Hospital Management System
-
-A real-time hospital queue-management platform with emergency booking, live patient tracking, and Firebase-powered synchronization.
-
-- [Live project](https://raycare.vercel.app)
-- [Research DOI](https://doi.org/10.6084/m9.figshare.30545999)
-
-### Bizzapt Enterprises
-
-A responsive business website focused on clear service presentation and cross-device usability.
-
-- [Visit Bizzapt](https://bizzapt.netlify.app)
-
-### RERA - Academic Resource Platform
-
-A centralized, mobile-friendly study-material hub designed for Computer Science students.
-
-- [Visit RERA](https://rayeesamahmood.github.io/RERA/)
-
-## Connect with me
-
-- Portfolio: [https://rayeesamahmood.github.io/portfolio-graphics/](https://rayeesa-portfolio-xhyf.vercel.app)
-- GitHub: [@rayeesamahmood](https://github.com/rayeesamahmood)
-- LinkedIn: [rayeesamahmood](https://www.linkedin.com/in/rayeesamahmood/)
-- Email: [rayeesamahmood8098@gmail.com](mailto:rayeesamahmood8098@gmail.com)
-
----
-
-*Always eager to learn, collaborate, and build technology that creates real-world impact.*
+- Email: rayeesamahmood8098@gmail.com
+- LinkedIn: [rayeesa-mahmood](https://www.linkedin.com/in/rayeesa-mahmood/)
+- GitHub: [@RayeesaMahmood](https://github.com/RayeesaMahmood)
